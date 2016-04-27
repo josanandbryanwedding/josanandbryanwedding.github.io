@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="">
 
-  {% include head.html %}
+  <title>Josan and Bryan Wedding</title>
 
-  <body>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
 
-    {% include header.html %}
+{% include navbar.html %}
+{{ content }}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jPushMenu.js"></script>
 
-    {% include footer.html %}
+<script type="text/javascript">
 
-  </body>
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50 && $(document).width() >= 992) {
+      $('nav').addClass('navbar-shrink');
+    } else {
+      $('nav').removeClass('navbar-shrink');
+    }
+  });
+
+  $('.toggle-menu').jPushMenu({closeOnClickLink: false});
+  $('.dropdown-toggle').dropdown();
+</script>
+
+
+</body>
 
 </html>
