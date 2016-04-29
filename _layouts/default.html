@@ -27,7 +27,55 @@
 <script type="text/javascript" src="/js/jPushMenu.js"></script>
 <script type="text/javascript" src="/js/jquery.final-countdown.min.js"></script>
 <script type="text/javascript" src="/js/kinetic.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ9jpPbMpe67nnSGVSzK--LZMlfFttcfU&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeAKRKcJAGPH0kzf_1dO-1xl_qDicJIu0&callback=initMap"></script>
+<script>
+  function initMap() {
+    var mapLocation = {lat: 14.370429, lng: 121.008782};
+    var customMapType = new google.maps.StyledMapType([
+      {
+        featureType: 'road',
+        stylers: [
+          {visibility: 'simplified'},
+          {gamma: 0.5},
+          {weight: 0.5},
+          { hue: "#333333" }
+        ]
+      },
+      {
+        elementType: 'labels',
+        stylers: [{visibility: 'on'}]
+      },
+      {
+        featureType: 'water',
+        stylers: [{color: '#2d2d2d'}]
+      }
+    ], {
+      name: 'Custom Style'
+    });
+    var customMapTypeId = 'custom_style';
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: mapLocation,
+      mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+      }
+    });
+
+    var image = '/img/asset/map-icon.png'
+
+    var marker = new google.maps.Marker({
+      position: mapLocation,
+      map: map,
+      center: mapLocation,
+      icon: image
+    });
+
+    map.mapTypes.set(customMapTypeId, customMapType);
+    map.setMapTypeId(customMapTypeId);
+  }
+</script>
+
 <script type="text/javascript" src="/js/home.js"></script>
 
 
