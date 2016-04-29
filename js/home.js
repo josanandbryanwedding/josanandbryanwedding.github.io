@@ -5,7 +5,26 @@ main.init = function(){
     main.onBurgerMenuClick();
     main.onIconTransition();
     main.initCountDown();
+    main.onMenuClick();
 }
+
+main.onMenuClick = function(){
+    $(function() {
+        $('.navbar-menu a[href*="#"]').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: $($(this).attr('href')).offset().top - 40
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+    });
+};
+
 main.onNavbarScroll = function(){
     $(window).scroll(function() {
         if ($(document).scrollTop() > 50 && $(document).width() >= 992) {
