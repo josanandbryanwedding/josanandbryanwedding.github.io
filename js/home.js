@@ -6,7 +6,26 @@ main.init = function(){
     main.onIconTransition();
     main.initCountDown();
     main.onMenuClick();
+    main.onClickBrandLogo();
 }
+
+main.onClickBrandLogo = function(){
+    var brandlogo = $('nav.navbar-default .container .navbar-header .navbar-brand');
+    $(function() {
+        $('brandlogo').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: $($(this).attr('href')).offset().top
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+    });
+};
 
 main.onMenuClick = function(){
     $(function() {
