@@ -1,10 +1,15 @@
 - name: CEREMONY
+  url: ceremony
 
 - name: OUR STORY
+  url: ourstory
 
 - name: PEOPLE
+  url: people
 
 - name: RSVP
+  url: rsvp
 
 - name: GALLERY
+  url: gallery
 

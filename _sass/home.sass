@@ -164,7 +164,6 @@
       letter-spacing: 3px
       font-size: 2em
       text-align: center
-      font-family: "Roboto Slab","sans-serif"
       span
         color: #777
         border-top: 2px solid #777
@@ -179,7 +178,6 @@
 
   .section-quotes
     .share-event
-      font-family: 'Roboto Slab','sans-serif'
       margin: 0 -10px 30px
       border-top: 1px dashed #ddd
       border-bottom: 1px dashed #ddd
@@ -199,7 +197,6 @@
       height: 100%
       .bride-section
         color: #777
-        font-family: "Roboto Slab",'sans-serif'
         margin: 15px 0 70px
         img
           width: 200px
@@ -224,7 +221,6 @@
           font-weight: normal
     .groom-section
       color: #777
-      font-family: "Roboto Slab",'sans-serif'
       margin: 15px 0 70px
       img
         width: 200px
@@ -285,7 +281,6 @@
         list-style: none
         padding-left: 0
         li
-          font-family: "Roboto Slab"
           font-weight: normal
           color: #777
           list-style: none
@@ -324,6 +319,209 @@
 
     .clock
       margin-top: 20px
-      font-family: "Roboto Slab","sans-serif"
       .text
         font-weight: 400
+
+#ourstory
+  .header
+    height: 150px
+    width: 150px
+    border-radius: 50%
+    color: white
+    margin: 0 auto
+    border: 8px double #777
+    position: relative
+    top: 70px
+    z-index: 0
+    background-color: #fff
+    img
+      font-size: 2.5em
+      text-align: center
+      line-height: 65px
+      color: #777
+      border: 2px dotted #777
+      height: 110px
+      border-radius: 50%
+      display: block
+      margin: 0 auto
+      position: relative
+      top: 12px
+      padding: 20px
+  .ribbon
+    background: #777
+    position: relative
+    height: 50px
+    margin: 0 auto
+    padding: 0 45px
+    min-width: 200px
+    display: table
+    &:before
+      left: -25px
+      content: ''
+      position: absolute
+      height: 0
+      border: 25px solid transparent
+      top: 0
+      width: 0
+      border-top-color: #777
+      border-bottom-color: #777
+      z-index: -1
+    span
+      font-size: 2em
+      line-height: 50px
+      text-transform: uppercase
+      font-family: "Montserrat", "sans-serif"
+      font-weight: bold
+      width: 100%
+      color: #fff
+      &:before
+        content: ""
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        display: block
+        position: absolute
+        background: #fff
+        font-size: 20px
+        top: 20px
+        left: 10px
+      &:after
+        content: ""
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        display: block
+        position: absolute
+        background: #fff
+        font-size: 20px
+        top: 20px
+        right: 10px
+    &:after
+      right: -25px
+      content: ''
+      position: absolute
+      height: 0
+      border: 25px solid transparent
+      top: 0
+      width: 0
+      border-top-color: #777
+      border-bottom-color: #777
+      z-index: -1
+  .quote-ribbon
+    font-size: 14px
+    margin: 20px 0 70px 0
+    color: #999
+    position: relative
+    top: 20px
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: 5px
+    &:before
+      top: -6px
+      left: -20px
+      content: ""
+      text-rendering: auto
+      width: 130px
+      height: 1px
+      background-color: #ddd
+      position: relative
+      display: inline-block
+    &:after
+      top: -6px
+      right: -20px
+      content: ""
+      text-rendering: auto
+      width: 130px
+      height: 1px
+      background-color: #ddd
+      position: relative
+      display: inline-block
+
+  .timeline-section
+    position: relative
+    top: -40px
+    &:before
+      content: ''
+      position: absolute
+      top: 15px
+      height: 100%
+      width: 4px
+      background: #fff!important
+      border-right: 1px dashed #ccc
+      left: 0
+      right: 0
+      margin-left: auto
+      margin-right: auto
+    .timeline-block
+      position: relative
+      margin: 70px auto
+      .timeline-img
+        position: absolute
+        box-shadow: 0 0 0 7px white, inset 0 0px 0 rgba(0, 0, 0, 0.08), 0 0 0px 8px #ddd
+        width: 200px
+        height: 200px
+        left: 50%
+        top: 40px
+        margin-left: -100px
+        border-radius: 50%
+        img
+          display: block
+          width: 100%
+          height: 100%
+          position: relative
+          border-radius: 50%
+      .timeline-content
+        position: relative
+        background: #fff
+        border-radius: 0.25em
+        color: #777
+        padding: 20px 40px
+        width: 39%
+        margin-left: 0
+        h2
+          font-family: "Montserrat","sans-serif"
+          text-transform: uppercase
+          letter-spacing: 0px
+          color: #3E3D39
+          font-size: 1.3em
+          font-weight: normal
+          font-style: normal
+        h3
+          font-weight: normal
+          color: #878787
+          font-size: 13px
+          margin: 15px -40px 0 -40px
+          text-transform: uppercase
+          padding: 0px 40px
+        p
+          font-size: 14px
+          font-weight: normal
+          margin: 1em 0
+          line-height: 1.7em
+      .circle-shape
+        background: #FF5252
+        box-shadow: 0 0 0 8px white
+        width: 150px
+        height: 150px
+        position: absolute
+        top: 40px
+        left: 0
+        right: 0
+        margin-left: auto
+        margin-right: auto
+        border-radius: 50%
+        h2
+          font-family: "Montserrat", "sans-serif"
+          text-transform: uppercase
+          letter-spacing: 0px
+          font-weight: normal
+          font-style: normal
+          text-align: center
+          color: white
+          font-size: 1.3em
+          margin: 35% auto
+    &:after
+      content: ''
+      display: table
+      clear: both
+

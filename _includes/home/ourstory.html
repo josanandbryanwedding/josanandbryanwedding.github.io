@@ -1,0 +1,33 @@
+<div class="container no-gutter">
+    <div class=" text-center header-section clearfix">
+        <div class="header">
+            <img class="ring-image" src="/img/asset/marriage-ring.png"/>
+        </div>
+        <div class="ribbon"><span>Our Story</span></div>
+
+        <div class="quote-ribbon">#AlwaysBetterChugether</div>
+    </div>
+
+    <div class="timeline-section">
+        {% for story in site.data.ourstory %}
+        <div class="timeline-block clearfix">
+            <div class="timeline-img picture">
+                <img src="{{ story.image }}">
+            </div>
+            <div class="timeline-content {% cycle 'text-right pull-left', 'text-left pull-right' %}">
+                <h2>{{ story.title }}</h2>
+                <h3>{{ story.date }}</h3>
+                <p>{{ story.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="timeline-block clearfix">
+            <div class="circle-shape">
+                <h2>We Just married</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
