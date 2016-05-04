@@ -1,29 +1,6 @@
 //Global
 .stylized
   font-family: 'Dancing-Script-Regular','sans-serif'
-#gmaps
-  .section-header
-    margin: 75px 0
-    text-align: center
-    font-size: 2em
-    color: #888
-    font-family: "Montserrat", "sans-serif"
-    text-transform: uppercase
-    letter-spacing: 0px
-    font-weight: normal
-    font-style: normal
-    &:before
-      margin: 0 auto
-      text-align: center
-      content: ""
-      height: 2px
-      width: 300px
-      display: block
-      position: relative
-      bottom: -50px
-      background-color: #ddd
-  #map
-    height: 400px
 
 #cover
   position: relative
@@ -650,6 +627,68 @@
             color: #777
             font-size: 13px
             letter-spacing: 3px
+
+#venue
+  .section-header
+    margin: 75px 0
+    text-align: center
+    font-size: 2em
+    color: #888
+    font-family: "Montserrat", "sans-serif"
+    text-transform: uppercase
+    letter-spacing: 0px
+    font-weight: normal
+    font-style: normal
+    &:before
+      margin: 0 auto
+      text-align: center
+      content: ""
+      height: 2px
+      width: 300px
+      display: block
+      position: relative
+      bottom: -50px
+      background-color: #ddd
+  #map
+    height: 400px
+
+  #venue-image-container
+    padding-top: 50px
+    padding-bottom: 50px
+    .venue-image
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+    .venue-large
+      height: 610px
+    .venue-small
+      height: 200px
+      .text-content
+        width: fit-content
+        margin: 0 auto
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        color: white
+        .venue-header
+          font-family: "Montserrat", "sans-serif"
+          text-transform: uppercase
+          letter-spacing: 0px
+          margin: 0 auto
+          padding: 5px 0
+          font-size: 1.3em
+          font-weight: normal
+          font-style: normal
+
+    .padding-large
+      margin: 0 5px
+    .padding-small
+      padding: 0
+      margin-bottom: 5px
+
+
+
+
 #rsvp
   background-image: url('http://ndesaintheme.com/ulemulem/wp-content/uploads/2015/05/3dbbb45f71f5d0327765b32d5a6b7671.jpg')
   background-size: cover

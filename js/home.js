@@ -7,6 +7,7 @@ main.init = function(){
     main.initCountDown();
     main.onMenuClick();
     main.onClickBrandLogo();
+
 }
 
 main.onClickBrandLogo = function(){

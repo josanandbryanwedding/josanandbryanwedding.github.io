@@ -7,6 +7,9 @@
 - name: PEOPLE
   url: people
 
+- name: VENUE
+  url: venue
+
 - name: RSVP
   url: rsvp
 
