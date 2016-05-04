@@ -37,7 +37,8 @@
       font-weight: 700
       line-height: 75px
       .left-section
-        span
+        .couple-name
+          float: right
           margin-right: -55px
           font-weight: normal
           border-bottom: 2px solid rgba(255, 255, 255, 0.3)
@@ -46,7 +47,8 @@
           font-size: 75px
           color: white
       .right-section
-        span
+        .couple-name
+          float: left
           margin-left: -35px
           font-weight: normal
           border-bottom: 2px solid rgba(255, 255, 255, 0.3)
@@ -186,7 +188,7 @@
       font-size: 1.7em
       text-transform: uppercase
       font-weight: bold
-      padding: 50px 0
+      padding: 50px 20px
       word-spacing: 5px
 
   .couple-info-section
@@ -575,7 +577,7 @@
       border-left: none
       color: #777
       font-style: normal
-      .team-member-right
+      .team-member-left
         padding: 0px 0 25px
         img
           margin: 20px 15px 0 35px
@@ -601,7 +603,7 @@
             color: #777
             font-size: 13px
             letter-spacing: 3px
-      .team-member-left
+      .team-member-right
         padding: 0px 0 25px
         img
           margin: 20px 35px 0 20px
@@ -784,15 +786,150 @@
     .intro-text-container
       padding-top: 350px
 
-@media (max-width: $screen-lg)
+@media (max-width: $screen-md-max)
   #cover
     .intro-text-container
+      padding-top: 210px
+      .intro-text
+        font-size: 50px
       .intro-header
         .left-section
-          span
-            margin-right: -15px
+          .couple-name
+            display: table
             font-size: 65px
+            float: none
+            text-align: center
+            width: fit-content
+            margin-left: auto
+            margin-right: auto
         .right-section
-          span
+          .couple-name
+            display: table
             font-size: 65px
-            margin-left: -15px
+            float: none
+            text-align: center
+            width: fit-content
+            margin-left: auto
+            margin-right: auto
+        .intro-place
+          display: table
+          margin: 0 auto
+          padding: 15px 0
+          font-size: 27px
+        .intro-date
+          font-size: 16px
+  #ceremony
+    .couple-info-section
+      .common-border
+        .bride-section
+          p
+            padding-left: 20px
+            padding-right: 20px
+      .groom-section
+        p
+          padding-left: 20px
+          padding-right: 20px
+
+@media (max-width: $screen-sm-max)
+  #cover
+    .intro-text-container
+      padding-top: 300px
+
+  #ceremony
+    .couple-info-section
+      .groom-section
+        margin-bottom: 120px
+    .venue-container
+      margin-top: 0
+      margin-bottom: 80px
+      .venue
+        h2
+          padding-left: 0
+  #ourstory
+    .timeline-section
+      &:before
+        display: none
+      .timeline-block
+        .timeline-img
+          position: relative
+          display: table
+          margin: 0 auto
+          top: 0
+          left: 0
+          right: 0
+        .timeline-content
+          text-align: center
+          width: 90%
+          margin: 0 auto
+          float: none !important
+          
+  #people
+    .common-border
+      .groomsmen
+        margin: 30px 0
+      .bridesmaid
+        margin: 30px 0
+      .testimonial
+        .team-member-left
+          padding: 0
+          img
+            display: block
+            margin-left: auto
+            margin-right: auto
+            float: none
+          p
+            padding: 20px 10px
+            margin: 0px
+            text-align: center
+        .team-member-right
+          padding: 0
+          img
+            display: block
+            margin-left: auto
+            margin-right: auto
+            float: none
+          p
+            padding: 20px 10px
+            margin: 0px
+            text-align: center
+
+@media (max-width: $screen-xs-max)
+  #cover
+    .intro-text-container
+      padding-top: 190px
+    .bottom-style
+      &:before
+        border-width: 90px 0 0px 320px
+      &:after
+        border-width: 90px 320px 0px 0
+
+
+  #ceremony
+    .venue-container
+      .venue
+        padding: 10px 0
+        
+  #people
+    .common-border
+      .testimonial
+        margin-top: 10px
+
+  #ourstory
+    .quote-ribbon
+      &:before
+        left: 0
+      &:after
+        right: 0
+
+  #venue
+    #venue-image-container
+      .venue-large
+        margin: 5px 0 0
+        height: 350px
+      .venue-small
+        margin: 5px 0
+
+@media (max-width: 568px)
+  #cover
+    height: auto
+
