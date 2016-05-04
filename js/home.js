@@ -7,8 +7,27 @@ main.init = function(){
     main.initCountDown();
     main.onMenuClick();
     main.onClickBrandLogo();
+    main.onClickIntroButton();
 
 }
+
+main.onClickIntroButton = function(){
+    var introButton = $('#cover .intro-text-container .intro-header .intro-button');
+    $(function() {
+        $(introButton).click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: $($(this).attr('href')).offset().top - 40
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+    });
+};
 
 main.onClickBrandLogo = function(){
     var brandlogo = $('nav.navbar-default .container .navbar-header .navbar-brand');
