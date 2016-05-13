@@ -68,10 +68,19 @@ main.onNavbarScroll = function(){
     $(window).scroll(function() {
         if ($(document).scrollTop() > 50 && $(document).width() >= 992) {
             $('nav').addClass('navbar-shrink');
-        } else {
+        }
+
+        else if ($(document).width() <= 991){
+            $('nav').addClass('navbar-shrink');
+        }
+        else {
             $('nav').removeClass('navbar-shrink');
         }
     });
+
+    if ($(document).width() <= 991) {
+        $('nav').addClass('navbar-shrink');
+    }
 }
 
 main.onBurgerMenuClick = function(){
