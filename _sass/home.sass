@@ -8,137 +8,186 @@
   background-attachment: fixed
   background-size: cover
   background-position: center center
-  height: 115vh
-  .bg-overlay
-    position: absolute
-    width: 100%
-    height: 100%
-    background-color: rgba(0,0,0,0.5)
-  .intro-text-container
-    position: relative
-    padding-top: 260px
-    padding-bottom: 100px
-    left: 0
-    right: 0
-    margin-left: auto
-    margin-right: auto
-    .intro-text
+  height: 100vh
+  .container-fluid
+    height: inherit
+    .bg-overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.5)
+    .intro-container
       position: relative
-      top: -40px
-      font-size: 50px
-      text-align: center
-      color: white
-    .intro-header
-      margin-bottom: 50px
-      text-transform: uppercase
-      font-family: 'Montserrat','sans-serif'
-      font-size: 75px
-      font-weight: 700
-      line-height: 75px
-      .left-section
-        .couple-name
-          float: right
-          margin-right: -55px
-          font-weight: normal
-          border-bottom: 2px solid rgba(255, 255, 255, 0.3)
-          border-top: 2px solid rgba(255, 255, 255, 0.3)
-          padding: 0px 0 9px 0
-          font-size: 75px
-          color: white
-      .right-section
-        .couple-name
-          float: left
-          margin-left: -35px
-          font-weight: normal
-          border-bottom: 2px solid rgba(255, 255, 255, 0.3)
-          border-top: 2px solid rgba(255, 255, 255, 0.3)
-          padding: 0px 0 9px 0
-          font-size: 75px
-          color: white
-      .pulse
-        color: white
-        -webkit-animation: pulse 1s linear infinite
-        -moz-animation: pulse 1s linear infinite
-        -ms-animation: pulse 1s linear infinite
-        animation: pulse 1s linear infinite
-        &:before
-          content: "\f08a"
-      .intro-place
-        font-family: Montserrat
-        text-transform: uppercase
-        letter-spacing: 0px
-        font-weight: normal
-        font-style: normal
-        color: white
-        text-align: center
-        &:before
-          opacity: 0.8
-          content: ""
-          height: 6px
-          width: 120px
-          display: inline-block
-          position: relative
-          top: -5px
-          right: 20px
-          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/////z4gsBhYAAZggTADEBwsiC4AF0QVAggAaRhQC3z7vXAAAAABJRU5ErkJggg==') repeat
-
-        &:after
-          opacity: 0.8
-          content: ""
-          height: 6px
-          width: 120px
-          display: inline-block
-          position: relative
-          top: -5px
-          left: 20px
-          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/////z4gsBhYAAZggTADEBwsiC4AF0QVAggAaRhQC3z7vXAAAAABJRU5ErkJggg==') repeat
-      .intro-date
-        color: white
-        text-align: center
-        font-family: "Montserrat", "sans-serif"
-        font-size: 14px
-        font-weight: 400
-        position: relative
-        top: -5px
-      .intro-button
-        background-color: #FF5252
-        color: white
-        font-size: 16px
+      top: 50%
+      transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      margin-left: auto
+      margin-right: auto
+      .intro-image
+        .cover-image
+          height: 450px
+          display: block
+          margin-left: auto
+          margin-right: auto
+    .mouse-scroll-container
+      position: relative
+      margin: 30px auto
+      .mouse
         display: block
-        width: fit-content
-        padding: 0px 50px
-        margin: 40px auto
-        text-decoration: none
-        transition: all 0.3s ease
-        -webkit-transition: all 0.3s ease
-        -o-transition: all 0.3s ease
-        &:hover
-          background-color: #FF8A80
+        margin-left: auto
+        margin-right: auto
+        width: 28px
+        height: 44px
+        border-radius: 12px
+        border: 2px solid #ffffff
+        text-align: center
+        &:after
+          display: inline-block
+          height: 8px
+          width: 8px
+          background-color: #ffffff
+          border-radius: 50%
+          content: ""
+          animation: scroll 1.3s ease-out infinite forwards
+      .caption
+        margin-top: 10px
+        text-transform: uppercase
+        text-align: center
+        color: white
+        font-family: "Montserrat"
+
+@keyframes scroll
+  0%
+    transform: translateY(0)
+    -moz-transform: translateY(0)
+    -o-transform: translateY(0)
+    -ms-transform: translateY(0)
+  50%
+    transform: translateY(10px)
+    -moz-transform: translateY(10px)
+    -o-transform: translateY(10px)
+    -ms-transform: translateY(10px)
+  100%
+    transform: translateY(0)
+    -moz-transform: translateY(0)
+    -o-transform: translateY(0)
+    -ms-transform: translateY(0)
 
 
-  .bottom-style
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    &:before
-      content: ''
-      position: absolute
-      border-style: solid
-      border-width: 90px 0 0px 685px
-      border-color: transparent transparent transparent #fff
-      z-index: 1
-      bottom: -15%
-      left: 0
-    &:after
-      content: ''
-      position: absolute
-      border-style: solid
-      border-width: 90px 685px 0px 0
-      border-color: transparent #fff transparent transparent
-      z-index: 1
-      bottom: -15%
-      right: 0
+
+  //  .intro-header
+  //    margin-bottom: 50px
+  //    text-transform: uppercase
+  //    font-family: 'Montserrat','sans-serif'
+  //    font-size: 75px
+  //    font-weight: 700
+  //    line-height: 75px
+  //    .left-section
+  //      .couple-name
+  //        float: right
+  //        margin-right: -55px
+  //        font-weight: normal
+  //        border-bottom: 2px solid rgba(255, 255, 255, 0.3)
+  //        border-top: 2px solid rgba(255, 255, 255, 0.3)
+  //        padding: 0px 0 9px 0
+  //        font-size: 75px
+  //        color: white
+  //    .right-section
+  //      .couple-name
+  //        float: left
+  //        margin-left: -35px
+  //        font-weight: normal
+  //        border-bottom: 2px solid rgba(255, 255, 255, 0.3)
+  //        border-top: 2px solid rgba(255, 255, 255, 0.3)
+  //        padding: 0px 0 9px 0
+  //        font-size: 75px
+  //        color: white
+  //    .pulse
+  //      color: white
+  //      -webkit-animation: pulse 1s linear infinite
+  //      -moz-animation: pulse 1s linear infinite
+  //      -ms-animation: pulse 1s linear infinite
+  //      animation: pulse 1s linear infinite
+  //      &:before
+  //        content: "\f08a"
+  //    .intro-place
+  //      font-family: Montserrat
+  //      text-transform: uppercase
+  //      letter-spacing: 0px
+  //      font-weight: normal
+  //      font-style: normal
+  //      color: white
+  //      text-align: center
+  //      &:before
+  //        opacity: 0.8
+  //        content: ""
+  //        height: 6px
+  //        width: 120px
+  //        display: inline-block
+  //        position: relative
+  //        top: -5px
+  //        right: 20px
+  //        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/////z4gsBhYAAZggTADEBwsiC4AF0QVAggAaRhQC3z7vXAAAAABJRU5ErkJggg==') repeat
+  //
+  //      &:after
+  //        opacity: 0.8
+  //        content: ""
+  //        height: 6px
+  //        width: 120px
+  //        display: inline-block
+  //        position: relative
+  //        top: -5px
+  //        left: 20px
+  //        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/////z4gsBhYAAZggTADEBwsiC4AF0QVAggAaRhQC3z7vXAAAAABJRU5ErkJggg==') repeat
+  //    .intro-date
+  //      color: white
+  //      text-align: center
+  //      font-family: "Montserrat", "sans-serif"
+  //      font-size: 14px
+  //      font-weight: 400
+  //      position: relative
+  //      top: -5px
+  //    .intro-button
+  //      background-color: #FF5252
+  //      color: white
+  //      font-size: 16px
+  //      display: block
+  //      width: fit-content
+  //      padding: 0px 50px
+  //      margin: 40px auto
+  //      text-decoration: none
+  //      transition: all 0.3s ease
+  //      -webkit-transition: all 0.3s ease
+  //      -o-transition: all 0.3s ease
+  //      &:hover
+  //        background-color: #FF8A80
+  //
+  //
+  //.bottom-style
+  //  position: absolute
+  //  bottom: 0
+  //  left: 0
+  //  right: 0
+  //  &:before
+  //    content: ''
+  //    position: absolute
+  //    border-style: solid
+  //    border-width: 90px 0 0px 685px
+  //    border-color: transparent transparent transparent #fff
+  //    z-index: 1
+  //    bottom: -15%
+  //    left: 0
+  //  &:after
+  //    content: ''
+  //    position: absolute
+  //    border-style: solid
+  //    border-width: 90px 685px 0px 0
+  //    border-color: transparent #fff transparent transparent
+  //    z-index: 1
+  //    bottom: -15%
+  //    right: 0
 
 
 #ceremony
@@ -784,43 +833,15 @@
         display: block
 
 
-@media (min-width: 1441px)
+@media (max-width: 1440px)
   #cover
-    .intro-text-container
-      padding-top: 350px
+    .container-fluid
+      .intro-container
+        .intro-image
+          .cover-image
+            height: 350px
 
 @media (max-width: $screen-md-max)
-  #cover
-    .intro-text-container
-      padding-top: 210px
-      .intro-text
-        font-size: 50px
-      .intro-header
-        .left-section
-          .couple-name
-            display: table
-            font-size: 65px
-            float: none
-            text-align: center
-            width: fit-content
-            margin-left: auto
-            margin-right: auto
-        .right-section
-          .couple-name
-            display: table
-            font-size: 65px
-            float: none
-            text-align: center
-            width: fit-content
-            margin-left: auto
-            margin-right: auto
-        .intro-place
-          display: table
-          margin: 0 auto
-          padding: 15px 0
-          font-size: 27px
-        .intro-date
-          font-size: 16px
   #ceremony
     .couple-info-section
       .common-border
@@ -835,8 +856,12 @@
 
 @media (max-width: $screen-sm-max)
   #cover
-    .intro-text-container
-      padding-top: 300px
+    .container-fluid
+      .intro-container
+        .intro-image
+          .cover-image
+            max-width: 90%
+            height: auto
 
   #ceremony
     .couple-info-section
@@ -903,17 +928,15 @@
         padding-top: 20px
         padding-bottom: 20px
 
-@media (max-width: $screen-xs-max)
+@media (max-width: 800px) and (orientation: landscape)
   #cover
-    .intro-text-container
-      padding-top: 190px
-    .bottom-style
-      &:before
-        border-width: 90px 0 0px 320px
-      &:after
-        border-width: 90px 320px 0px 0
+    .container-fluid
+      .intro-container
+        .intro-image
+          .cover-image
+            max-width: 60%
 
-
+@media (max-width: $screen-xs-max)
   #ceremony
     .venue-container
       .venue
@@ -939,31 +962,24 @@
       .venue-small
         margin: 5px 0
 
+
+
 @media (max-width: 568px)
   #cover
     height: auto
-    .intro-text-container
-      .intro-text
-        font-size: 42px
-      .intro-header
-        font-size: 50px
-        .left-section
-          .couple-name
-            font-size: 55px
-        .right-section
-          .couple-name
-            font-size: 55px
-        .intro-place
-          &:before
-            display: block
-            top: 0
-            right: 0
-            width: 250px
-          &:after
-            display: block
-            top: 0
-            left: 0
-            width: 250px
+    .container-fluid
+      .intro-container
+        top: 0
+        transform: none
+        padding: 190px 0 100px
+      .mouse-scroll-container
+        .caption
+          font-size: 12px
+
+  #countdown
+    .countdown-container
+      .section-header
+        font-size: 1.3em
 
   #ceremony
     .border-event-top
@@ -976,12 +992,6 @@
     .section-quotes
       .share-event
         font-size: 1.5em
-
-@media (max-width: 568px)
-  #countdown
-    .countdown-container
-      .section-header
-        font-size: 1.3em
 
   #ourstory
     .ribbon
@@ -1003,6 +1013,16 @@
     .form-container
       &:before
         display: none
+
+@media (max-width: 568px) and (orientation: landscape)
+  #cover
+    height: auto
+    .container-fluid
+      .intro-container
+        top: 0
+        transform: none
+        padding: 150px 0 100px
+
 
 
 
