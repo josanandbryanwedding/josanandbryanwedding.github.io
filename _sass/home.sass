@@ -27,7 +27,8 @@
       margin-right: auto
       .intro-image
         .cover-image
-          height: 450px
+          max-width: 90%
+          height: auto
           display: block
           margin-left: auto
           margin-right: auto
@@ -839,7 +840,8 @@
       .intro-container
         .intro-image
           .cover-image
-            height: 350px
+            max-width: 50%
+            min-width: 50%
 
 @media (max-width: $screen-md-max)
   #ceremony
@@ -1013,6 +1015,12 @@
     .form-container
       &:before
         display: none
+
+  footer
+    h4
+      font-size: 14px
+    h5
+      font-size: 12px
 
 @media (max-width: 568px) and (orientation: landscape)
   #cover
