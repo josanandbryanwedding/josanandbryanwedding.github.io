@@ -1,25 +1,35 @@
 <div class="container no-gutter">
     <div class="form-container col-md-offset-3 col-md-6">
         <h2 class="section-header text-center">Répondez s'il vous plaît</h2>
+        <script type="text/javascript">var submitted = false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;)"></iframe>
+        <form id="form-content" name="" action="https://docs.google.com/a/crux.design/forms/d/e/1FAIpQLSffGnXYxywlrm6Lc1TkLZBNWLK2rekYzdsw5Qb5ZjIl4C55eg/formResponse" method="post" class="form-conten clearfixt" target="hidden_iframe" method="POST" >
 
-        <form name="" action="#" method="post" class="form-content" novalidate="novalidate">
-            <p>Your Name (required)<br>
-                <input type="text" name="your-name" value="" size="40" class="form-control" aria-required="true" aria-invalid="false">
-            </p>
-            <p>Your Email (required)<br>
-                <input type="email" name="your-email" value="" size="40" class="form-control" aria-required="true" aria-invalid="false">
-            </p>
-            <p>Are you going to attend ?<br>
-                <select name="menu" class="form-control" aria-required="true" aria-invalid="false">
+            <div class="form-content-item">
+                <span class="content-title">Full Name</span>
+                <input autocomplete="off" required="required" class="content-item" type="text" name="entry.810804208" id="entry.810804208" value="" size="40" class="form-control" aria-required="true" aria-invalid="false">
+            </div>
+
+            <div class="form-content-item">
+                <span class="content-title">Email Address</span>
+                <input autocomplete="off" required="required" class="content-item" type="email" name="entry.80054931" id="entry.80054931" value="" size="40" class="form-control" aria-required="true" aria-invalid="false">
+            </div>
+
+            <div class="form-content-item">
+                <span class="content-title">Number of many attendees</span>
+                <input autocomplete="off" required="required" class="content-item" type="number" name="entry.1457240131" id="entry.1457240131" value="" size="40" class="form-control" aria-required="true" aria-invalid="false">
+            </div>
+
+            <div class="form-content-item">
+                <span class="content-title">Are you going to attend ?</span>
+                <select required="required" class="content-item" name="entry.784984864" id="entry.784984864" class="form-control" aria-required="true" aria-invalid="false">
                     <option value="">---</option>
-                    <option value="Yes I will">Yes, I Will</option>
-                    <option value="No I'm Not">No, I'm Not</option>
+                    <option value="Yes">Yes, I Will</option>
+                    <option value="No">No, I'm Not</option>
                 </select>
-            </p>
-            <p>
-                <input type="submit" value="I'm Attending" class="form-control submit-button">
-            </p>
-        </form>
+           </div>
 
+            <button data-toggle="modal" type="submit" id="ss-submit" class=" form-control submit-button">I'm Attending</button>
+        </form>
     </div>
 </div>
