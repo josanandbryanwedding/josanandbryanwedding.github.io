@@ -1,27 +1,46 @@
 <div class="container no-gutter">
     <h2 class="section-header">PEOPLE</h2>
 
-    <div class="col-sm-6 col-xs-12 common-border section-container">
-        <h3 class="content-header text-center">Groomsmen</h3>
-        {% for groomsmen in site.data.groomsmen %}
-        <div class="testimonial col-md-6 col-sm-6 col-xs-6">
+    <div class="no-gutter col-lg-6 col-md-6 col-sm-6 col-xs-12 common-border section-container">
+        <h3 class="content-header text-center">Best Man</h3>
+        <div class="testimonial col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-offset-3 col-xs-6">
             <div class="content-container">
-                <img class="content-image" src="/img/asset/{{ groomsmen.image }}"/>
+                <img class="center-block content-image" src="/img/asset/{{ site.people.bestman.image }}"/>
+                <span class="content-name">{{ site.people.bestman.name }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="no-gutter col-lg-6 col-md-6 col-sm-6 col-xs-12 common-border section-container" style="border-right: none;">
+        <h3 class="content-header text-center">Maid of Honor</h3>
+        <div class="testimonial col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-offset-3 col-xs-6">
+            <div class="content-container">
+                <img class="center-block content-image" src="/img/asset/{{ site.people.maidofhonor.image }}"/>
+                <span class="content-name">{{ site.people.maidofhonor.name }}</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 common-border section-container">
+        <h3 class="content-header text-center">Groomsmen</h3>
+        {% for groomsmen in site.people.groomsmen %}
+        <div class="testimonial col-xs-6">
+            <div class="content-container">
+                <img class="center-block content-image" src="/img/asset/{{ groomsmen.image }}"/>
                 <span class="content-name">{{ groomsmen.name }}</span>
-                <span class="content-relation">{{ groomsmen.relation }}</span>
             </div>
         </div>
         {% endfor %}
     </div>
-    <div class="col-sm-6 col-sm-6 col-xs-12 common-border section-container" style="border-right: none;">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 common-border section-container" style="border-right: none;">
         <h3 class="content-header text-center">Bridesmaid</h3>
-        {% for bridesmaid in site.data.bridesmaid %}
-        <div class="testimonial col-md-6 col-sm-6 col-xs-6">
+        {% for bridesmaid in site.people.bridesmaid %}
+        <div class="testimonial col-xs-6">
             <div class="content-container">
-                <img class="content-image" src="/img/asset/{{ bridesmaid.image }}"/>
+                <img class="center-block content-image" src="/img/asset/{{ bridesmaid.image }}"/>
                 <span class="content-name">{{ bridesmaid.name }}</span>
-                <span class="content-relation">{{ bridesmaid.relation }}</span>
-
             </div>
         </div>
         {% endfor %}
