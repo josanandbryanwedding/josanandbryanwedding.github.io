@@ -66,20 +66,42 @@ main.onClickBrandLogo = function(){
 };
 
 main.onMenuClick = function(){
-    $(function() {
-        $('.navbar-menu a[href*="#"]').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: $($(this).attr('href')).offset().top - 40
-                    }, 700);
-                    return false;
-                }
-            }
+    $(document).on("scroll", onScroll);
+    
+    $('.navbar-menu a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a').each(function () {
+            $(this).removeClass('active-menu');
+        })
+        $(this).addClass('active-menu');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 80
+        }, 700, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
         });
     });
+
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop() + 96;
+        $('.navbar-menu a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top  + refElement.height() > scrollPos) {
+                $('.navbar-menu a').removeClass("active-menu");
+                currLink.addClass("active-menu");
+            }
+            else{
+                currLink.removeClass("active-menu");
+            }
+        });
+    }
 };
 
 main.onNavbarScroll = function(){
