@@ -1,4 +1,8 @@
 //Global
+.no-gutter
+  padding-left: 0
+  padding-right: 0
+
 .stylized
   font-family: 'Dancing-Script-Regular','sans-serif'
 
@@ -75,121 +79,6 @@
     -moz-transform: translateY(0)
     -o-transform: translateY(0)
     -ms-transform: translateY(0)
-
-
-
-  //  .intro-header
-  //    margin-bottom: 50px
-  //    text-transform: uppercase
-  //    font-family: 'Montserrat','sans-serif'
-  //    font-size: 75px
-  //    font-weight: 700
-  //    line-height: 75px
-  //    .left-section
-  //      .couple-name
-  //        float: right
-  //        margin-right: -55px
-  //        font-weight: normal
-  //        border-bottom: 2px solid rgba(255, 255, 255, 0.3)
-  //        border-top: 2px solid rgba(255, 255, 255, 0.3)
-  //        padding: 0px 0 9px 0
-  //        font-size: 75px
-  //        color: white
-  //    .right-section
-  //      .couple-name
-  //        float: left
-  //        margin-left: -35px
-  //        font-weight: normal
-  //        border-bottom: 2px solid rgba(255, 255, 255, 0.3)
-  //        border-top: 2px solid rgba(255, 255, 255, 0.3)
-  //        padding: 0px 0 9px 0
-  //        font-size: 75px
-  //        color: white
-  //    .pulse
-  //      color: white
-  //      -webkit-animation: pulse 1s linear infinite
-  //      -moz-animation: pulse 1s linear infinite
-  //      -ms-animation: pulse 1s linear infinite
-  //      animation: pulse 1s linear infinite
-  //      &:before
-  //        content: "\f08a"
-  //    .intro-place
-  //      font-family: Montserrat
-  //      text-transform: uppercase
-  //      letter-spacing: 0px
-  //      font-weight: normal
-  //      font-style: normal
-  //      color: white
-  //      text-align: center
-  //      &:before
-  //        opacity: 0.8
-  //        content: ""
-  //        height: 6px
-  //        width: 120px
-  //        display: inline-block
-  //        position: relative
-  //        top: -5px
-  //        right: 20px
-  //        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/////z4gsBhYAAZggTADEBwsiC4AF0QVAggAaRhQC3z7vXAAAAABJRU5ErkJggg==') repeat
-  //
-  //      &:after
-  //        opacity: 0.8
-  //        content: ""
-  //        height: 6px
-  //        width: 120px
-  //        display: inline-block
-  //        position: relative
-  //        top: -5px
-  //        left: 20px
-  //        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/////z4gsBhYAAZggTADEBwsiC4AF0QVAggAaRhQC3z7vXAAAAABJRU5ErkJggg==') repeat
-  //    .intro-date
-  //      color: white
-  //      text-align: center
-  //      font-family: "Montserrat", "sans-serif"
-  //      font-size: 14px
-  //      font-weight: 400
-  //      position: relative
-  //      top: -5px
-  //    .intro-button
-  //      background-color: #FF5252
-  //      color: white
-  //      font-size: 16px
-  //      display: block
-  //      width: fit-content
-  //      padding: 0px 50px
-  //      margin: 40px auto
-  //      text-decoration: none
-  //      transition: all 0.3s ease
-  //      -webkit-transition: all 0.3s ease
-  //      -o-transition: all 0.3s ease
-  //      &:hover
-  //        background-color: #FF8A80
-  //
-  //
-  //.bottom-style
-  //  position: absolute
-  //  bottom: 0
-  //  left: 0
-  //  right: 0
-  //  &:before
-  //    content: ''
-  //    position: absolute
-  //    border-style: solid
-  //    border-width: 90px 0 0px 685px
-  //    border-color: transparent transparent transparent #fff
-  //    z-index: 1
-  //    bottom: -15%
-  //    left: 0
-  //  &:after
-  //    content: ''
-  //    position: absolute
-  //    border-style: solid
-  //    border-width: 90px 685px 0px 0
-  //    border-color: transparent #fff transparent transparent
-  //    z-index: 1
-  //    bottom: -15%
-  //    right: 0
-
 
 #ceremony
   position: relative
@@ -319,7 +208,7 @@
     .venue
       text-align: center
       h2
-        font-family: Montserrat
+        font-family: 'Montserrat'
         text-transform: uppercase
         font-size: 1.3em
         color: #3E3D39
@@ -599,9 +488,12 @@
       bottom: -50px
       background-color: #ddd
   .common-border
-    border-right: 1px dashed #ddd
     height: 100%
-    margin: 15px 0
+    padding-top: 15px
+    padding-bottom: 15px
+    border-bottom: 1px dashed #ddd
+    border-right: 1px dashed #ddd
+    border-top: 1px dashed #ddd
     .content-header
       font-family: "Montserrat"
       text-transform: uppercase
@@ -615,33 +507,23 @@
       border-radius: 0
       letter-spacing: 3px
     .testimonial
-      border-radius: 5px
-      display: block
-      padding: 20px 0
+      margin-top: 20px
+      margin-bottom: 20px
       position: relative
       .content-container
-        padding: 0px 0 25px
+        margin: 0px 0 25px
         .content-image
-          margin: 0 auto
           width: 140px
           height: 140px
           border-radius: 50%
-          position: relative
-          display: block
         .content-name
+          word-wrap: break-word
           display: block
           text-align: center
-          font-size: 16px
+          font-size: 14px
           text-transform: uppercase
           margin: 15px 0 0
           color: #777
-        .content-relation
-          color: #777
-          display: block
-          text-align: center
-          font-size: 13px
-          letter-spacing: 3px
-          text-transform: uppercase
 
 
 #venue
@@ -801,6 +683,49 @@
         display: block
 
 
+.modal.fade
+  .modal-dialog
+    position: absolute
+    top: 40%
+    left: 0
+    right: 0
+    opacity: 0
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+
+
+  &.in .modal-dialog
+    margin-top: 0
+    margin-bottom: 0
+    position: absolute
+    top: 40%
+    opacity: 1
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)
+
+/* DIALOG CONTENT
+.modal-content
+  border: none
+  border-radius: 2px
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  padding: 8% 5%
+  background-color: #27ae60
+  .text-alert
+    margin: 20px auto
+    color: white
+    text-align: center
+
+
 @media (max-width: 1440px)
   #cover
     .container-fluid
@@ -811,6 +736,17 @@
             min-width: 50%
 
 @media (max-width: $screen-md-max)
+  #people
+    .common-border
+      .testimonial
+        .content-container
+          .content-image
+            width: 120px
+            height: 120px
+          .content-name
+            font-size: 12px
+
+
   #ceremony
     .couple-info-section
       .common-border
@@ -867,48 +803,6 @@
       .gift-section
         padding-top: 20px
         padding-bottom: 20px
-
-.modal.fade
-  .modal-dialog
-    position: absolute
-    top: 40%
-    left: 0
-    right: 0
-    opacity: 0
-    -webkit-transform: translateY(-40%)
-    -ms-transform: translateY(-40%)
-    -o-transform: translateY(-40%)
-    transform: translateY(-40%)
-    -webkit-transition: all 0.3s ease
-    -moz-transition: all 0.3s ease
-    -o-transition: all 0.3s ease
-    transition: all 0.3s ease
-
-
-  &.in .modal-dialog
-    margin-top: 0
-    margin-bottom: 0
-    position: absolute
-    top: 40%
-    opacity: 1
-    -webkit-transform: translateY(-40%)
-    -ms-transform: translateY(-40%)
-    -o-transform: translateY(-40%)
-    transform: translateY(-40%)
-
-/* DIALOG CONTENT
-.modal-content
-  border: none
-  border-radius: 2px
-  -webkit-box-shadow: none
-  -moz-box-shadow: none
-  box-shadow: none
-  padding: 8% 5%
-  background-color: #27ae60
-  .text-alert
-    margin: 20px auto
-    color: white
-    text-align: center
 
 @media (max-width: 800px) and (orientation: landscape)
   #cover
@@ -994,10 +888,7 @@
           .content-image
             height: 100px
             width: 100px
-          .content-name
-            font-size: 13px
-          .content-relation
-            font-size: 11px
+
   #rsvp
     .form-container
       &:before

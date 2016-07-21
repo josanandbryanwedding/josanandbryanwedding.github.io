@@ -1,9 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
 title: Your awesome title
@@ -19,3 +13,72 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+
+people:
+  bestman:
+    name: Gerardo Guangco
+    image: 'groomsmen.jpg'
+
+  maidofhonor:
+    name: Rochelle Barros
+    image: 'bridesmaid.jpg'
+
+  groomsmen:
+    - name: Elmer Labella
+      image: 'groomsmen.jpg'
+      relation: Friend
+
+    - name: Dino Antonio Poblete
+      image: 'groomsmen.jpg'
+      relation: Friend
+
+    - name: Joey Sendaydiego
+      image: 'groomsmen.jpg'
+      relation: Friend
+
+    - name: Edrick Lim
+      image: 'groomsmen.jpg'
+      relation: Friend
+
+    - name: Josh Gatchalian
+      image: 'groomsmen.jpg'
+      relation: Friend
+
+    - name: Kim Carl Filomeno
+      image: 'groomsmen.jpg'
+      relation: Friend
+
+  bridesmaid:
+    - name: Jenny Ferrer
+      image: 'bridesmaid.jpg'
+      relation: Friend
+
+    - name: Rizza Marie Dometita
+      image: 'bridesmaid.jpg'
+      relation: Friend
+
+    - name: Jizea Mee Baltazar
+      image: 'bridesmaid.jpg'
+      relation: Friend
+
+    - name: Michelle Mae Ong
+      image: 'bridesmaid.jpg'
+      relation: Friend
+
+    - name: April Anne Belandres
+      image: 'bridesmaid.jpg'
+      relation: Friend
+
+    - name: Janine April Tolentino
+      image: 'bridesmaid.jpg'
+      relation: Friend
+
+
+
+
+
+
+
+
+
