@@ -602,7 +602,7 @@
     border-right: 1px dashed #ddd
     height: 100%
     margin: 15px 0
-    .bridesmaid
+    .content-header
       font-family: "Montserrat"
       text-transform: uppercase
       font-weight: normal
@@ -610,74 +610,39 @@
       text-align: center
       font-size: 1.2em
       color: #666
-      margin: 30px 20px 0 0
+      margin: 30px 15px
       padding: 0
       border-radius: 0
       letter-spacing: 3px
     .testimonial
       border-radius: 5px
       display: block
-      padding: 20px
-      margin: 40px 0 0
+      padding: 20px 0
       position: relative
-      text-align: left
-      font-weight: normal
-      font-size: 18px
-      border-left: none
-      color: #777
-      font-style: normal
-      .team-member-left
+      .content-container
         padding: 0px 0 25px
-        img
-          margin: 20px 15px 0 35px
-          width: 120px
-          height: 120px
+        .content-image
+          margin: 0 auto
+          width: 140px
+          height: 140px
           border-radius: 50%
-          text-align: left
-          float: right
           position: relative
-          top: -5px
-        p
-          position: relative
-          font-size: 14px
-          text-align: right
-          padding: 0 175px 0 0
-          margin: 0 0 15px 0
-          top: 10px
-          left: 0px
+          display: block
+        .content-name
+          display: block
+          text-align: center
+          font-size: 16px
+          text-transform: uppercase
+          margin: 15px 0 0
           color: #777
-          line-height: 1.7em
-          b
-            text-transform: uppercase
-            color: #777
-            font-size: 13px
-            letter-spacing: 3px
-      .team-member-right
-        padding: 0px 0 25px
-        img
-          margin: 20px 35px 0 20px
-          width: 120px
-          height: 120px
-          border-radius: 50%
-          text-align: right
-          float: left
-          position: relative
-          top: -5px
-        p
-          position: relative
-          font-size: 14px
-          text-align: left
-          padding: 0 0 0 175px
-          margin: 0 0 15px 0
-          top: 10px
-          left: 0px
+        .content-relation
           color: #777
-          line-height: 1.7em
-          b
-            text-transform: uppercase
-            color: #777
-            font-size: 13px
-            letter-spacing: 3px
+          display: block
+          text-align: center
+          font-size: 13px
+          letter-spacing: 3px
+          text-transform: uppercase
+
 
 #venue
   .section-header
@@ -894,36 +859,7 @@
           width: 90%
           margin: 0 auto
           float: none !important
-          
-  #people
-    .common-border
-      .groomsmen
-        margin: 30px 0
-      .bridesmaid
-        margin: 30px 0
-      .testimonial
-        .team-member-left
-          padding: 0
-          img
-            display: block
-            margin-left: auto
-            margin-right: auto
-            float: none
-          p
-            padding: 20px 10px
-            margin: 0px
-            text-align: center
-        .team-member-right
-          padding: 0
-          img
-            display: block
-            margin-left: auto
-            margin-right: auto
-            float: none
-          p
-            padding: 20px 10px
-            margin: 0px
-            text-align: center
+
 
   #gift-registration
     .gift-sponsor-container
@@ -987,11 +923,7 @@
     .venue-container
       .venue
         padding: 10px 0
-        
-  #people
-    .common-border
-      .testimonial
-        margin-top: 10px
+
 
   #ourstory
     .quote-ribbon
@@ -1053,8 +985,19 @@
       .timeline-block
         .timeline-content
           width: 100%
-          padding: 20px 
-          
+          padding: 20px
+
+  #people
+    .common-border
+      .testimonial
+        .content-container
+          .content-image
+            height: 100px
+            width: 100px
+          .content-name
+            font-size: 13px
+          .content-relation
+            font-size: 11px
   #rsvp
     .form-container
       &:before
