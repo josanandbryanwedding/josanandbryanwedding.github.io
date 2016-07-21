@@ -1,34 +1,29 @@
 <div class="container no-gutter">
     <h2 class="section-header">PEOPLE</h2>
 
-    <div class="col-sm-6 common-border left-section">
-        <h3 class="bridesmaid text-center">Groomsmen</h3>
+    <div class="col-sm-6 col-xs-12 common-border section-container">
+        <h3 class="content-header text-center">Groomsmen</h3>
         {% for groomsmen in site.data.groomsmen %}
-        <blockquote class="testimonial">
-            <div class="team-member-left">
-                <img src="{{ groomsmen.image }}">
-                <p>{{ groomsmen.message }}</p>
-                <p>
-                    <b>{{ groomsmen.name }}</b>
-                    <small>{{ groomsmen.relation }}</small>
-                </p>
+        <div class="testimonial col-md-6 col-sm-6 col-xs-6">
+            <div class="content-container">
+                <img class="content-image" src="/img/asset/{{ groomsmen.image }}"/>
+                <span class="content-name">{{ groomsmen.name }}</span>
+                <span class="content-relation">{{ groomsmen.relation }}</span>
             </div>
-        </blockquote>
+        </div>
         {% endfor %}
     </div>
-    <div class="col-sm-6 common-border right-section" style="border-right: none;">
-        <h3 class="bridesmaid text-center">Bridesmaid</h3>
+    <div class="col-sm-6 col-sm-6 col-xs-12 common-border section-container" style="border-right: none;">
+        <h3 class="content-header text-center">Bridesmaid</h3>
         {% for bridesmaid in site.data.bridesmaid %}
-        <blockquote class="testimonial">
-            <div class="team-member-right">
-                <img src="{{ bridesmaid.image }}">
-                <p>{{ bridesmaid.message }}</p>
-                <p>
-                    <b>{{ bridesmaid.name }}</b>
-                    <small>{{ bridesmaid.relation }}</small>
-                </p>
+        <div class="testimonial col-md-6 col-sm-6 col-xs-6">
+            <div class="content-container">
+                <img class="content-image" src="/img/asset/{{ bridesmaid.image }}"/>
+                <span class="content-name">{{ bridesmaid.name }}</span>
+                <span class="content-relation">{{ bridesmaid.relation }}</span>
+
             </div>
-        </blockquote>
+        </div>
         {% endfor %}
     </div>
 </div>
