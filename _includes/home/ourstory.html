@@ -12,7 +12,7 @@
         {% for story in site.data.ourstory %}
         <div class="timeline-block clearfix">
             <div class="timeline-img picture">
-                <img src="{{ story.image }}">
+                <img src="/img/our-story/{{ story.image }}">
             </div>
             <div class="timeline-content {% cycle 'text-right pull-left', 'text-left pull-right' %}">
                 <h2>{{ story.title }}</h2>
