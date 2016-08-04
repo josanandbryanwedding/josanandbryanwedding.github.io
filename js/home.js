@@ -9,29 +9,30 @@ main.init = function(){
     main.onClickBrandLogo();
     main.onClickIntroButton();
     main.onFormSubmit();
-    main.instagramFeed();
-
-};
+    setTimeout(function(){
+        main.instagramFeed();
+    }, 3000);
+}
 
 main.instagramFeed = function () {
     $.getScript('/js/instafeed.min.js', function () {
         if (Instafeed) {
             new Instafeed({
-                get: 'tagged',
-                tagName: 'MYSTERYMANILA',
-                clientId: '0cd51b94022a49f0be1e4b114f24a9ea',
-                accessToken: '1162756535.0cd51b9.7b8b57dd36494ff08f9e4e5c976742b7',
-                limit: 12,
+                get: 'user',
+                userId: '3257918608',
+                accessToken: '3257918608.1677ed0.9f949224876042d4b60ecc07c66bb24a',
+                limit: 9,
                 sortBy: 'most-recent',
+                orientation: 'square',
                 template: '<a href="{{link}}" target="_blank" class="col-md-2 col-sm-2 col-xs-6"><img src="{{image}}" /></a>',
-                resolution: 'low_resolution',
+                resolution: 'standard_resolution',
                 success: function(feed){
                     var data = feed.data.reverse();
                     $('.placeholder').each(function(index, placeholder){
                         var model = data.pop();
                         $(placeholder).html(
-                            '<a href="'+ model.link +'" target="_blank">'
-                            + '<img src="'+ model.images.low_resolution.url +'" />'
+                            '<a class="image-link" href="'+ model.link +'" target="_blank">'
+                            + '<img src="'+ model.images.standard_resolution.url +'" />'
                             + '</a>').hide().fadeIn();
                     });
                 }
