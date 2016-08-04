@@ -27,61 +27,61 @@ ceremony:
 people:
   bestman:
     name: Gerardo Guangco
-    image: 'groomsmen.jpg'
+    image: 'gerardo.png'
 
   maidofhonor:
     name: Rochelle Barros
-    image: 'bridesmaid.jpg'
+    image: 'rochelle.png'
 
   groomsmen:
     - name: Elmer Labella
-      image: 'groomsmen.jpg'
-      relation: Friend
+      image: 'elmer.png'
+      
 
     - name: Dino Antonio Poblete
-      image: 'groomsmen.jpg'
-      relation: Friend
+      image: 'dino.png'
+      
 
     - name: Joey Sendaydiego
-      image: 'groomsmen.jpg'
-      relation: Friend
+      image: 'senday.png'
+      
 
     - name: Edrick Lim
-      image: 'groomsmen.jpg'
-      relation: Friend
+      image: 'edrick.png'
+      
 
     - name: Josh Gatchalian
-      image: 'groomsmen.jpg'
-      relation: Friend
+      image: 'josh.png'
+      
 
     - name: Kim Carl Filomeno
-      image: 'groomsmen.jpg'
-      relation: Friend
+      image: 'kim.png'
+      
 
   bridesmaid:
     - name: Jenny Ferrer
-      image: 'bridesmaid.jpg'
-      relation: Friend
+      image: 'jenny.png'
+      
 
     - name: Rizza Marie Dometita
-      image: 'bridesmaid.jpg'
-      relation: Friend
+      image: 'rizza.png'
+      
 
     - name: Jizea Mee Baltazar
-      image: 'bridesmaid.jpg'
-      relation: Friend
+      image: 'jizea.png'
+      
 
     - name: Michelle Mae Ong
-      image: 'bridesmaid.jpg'
-      relation: Friend
+      image: 'michelle.png'
+      
 
     - name: April Anne Belandres
-      image: 'bridesmaid.jpg'
-      relation: Friend
+      image: 'april.png'
+      
 
     - name: Janine April Tolentino
-      image: 'bridesmaid.jpg'
-      relation: Friend
+      image: 'janine.png'
+      
 
 
 
