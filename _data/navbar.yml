@@ -10,12 +10,6 @@
 - name: VENUE
   url: venue
 
-- name: RSVP
-  url: rsvp
-
 - name: Gallery
   url: our-gallery
-
-- name: Gift
-  url: gift-registration
 
