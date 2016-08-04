@@ -4,7 +4,7 @@
         <h3 class="content-header text-center">Best Man</h3>
         <div class="testimonial col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-offset-3 col-xs-6">
             <div class="content-container">
-                <img class="center-block content-image" src="/img/asset/{{ site.people.bestman.image }}"/>
+                <img class="center-block content-image" src="/img/groosmen/{{ site.people.bestman.image }}"/>
                 <span class="content-name">{{ site.people.bestman.name }}</span>
             </div>
         </div>
@@ -14,21 +14,19 @@
         <h3 class="content-header text-center">Maid of Honor</h3>
         <div class="testimonial col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-offset-3 col-xs-6">
             <div class="content-container">
-                <img class="center-block content-image" src="/img/asset/{{ site.people.maidofhonor.image }}"/>
+                <img class="center-block content-image" src="/img/bridesmaid/{{ site.people.maidofhonor.image }}"/>
                 <span class="content-name">{{ site.people.maidofhonor.name }}</span>
             </div>
         </div>
 
     </div>
 
-
-
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix common-border section-container">
         <h3 class="content-header text-center">Groomsmen</h3>
         {% for groomsmen in site.people.groomsmen %}
         <div class="testimonial no-gutter col-xs-6 ">
             <div class="content-container">
-                <img class="center-block content-image" src="/img/asset/{{ groomsmen.image }}"/>
+                <img class="center-block content-image" src="/img/groosmen/{{ groomsmen.image }}"/>
                 <div class="caption">
                     <span class="content-name">{{ groomsmen.name }}</span>
                 </div>
@@ -41,7 +39,7 @@
         {% for bridesmaid in site.people.bridesmaid %}
         <div class="testimonial no-gutter col-xs-6">
             <div class="content-container">
-                <img class="center-block content-image" src="/img/asset/{{ bridesmaid.image }}"/>
+                <img class="center-block content-image" src="/img/bridesmaid/{{ bridesmaid.image }}"/>
                 <span class="content-name">{{ bridesmaid.name }}</span>
             </div>
         </div>
