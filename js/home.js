@@ -165,28 +165,28 @@ main.onIconTransition = function() {
 }
 
 main.initCountDown = function(){
-    $('.countdown').final_countdown({
-        start: new Date("April 29, 2016 12:41:00").getTime() / 1000,
-        end: new Date("May 22, 2016 2:00:00").getTime() / 1000,
-        now: new Date().getTime() / 1000,
-        seconds: {
-            borderColor: 'white',
-            borderWidth: '6'
-        },
-        minutes: {
-            borderColor: 'white',
-            borderWidth: '6'
-        },
-        hours: {
-            borderColor: 'white',
-            borderWidth: '6'
-        },
-        days: {
-            borderColor: 'white',
-            borderWidth: '6'
-        }
+    $('#clock').countdown('2016/10/10').on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime(''
+            + '<div class="countdown-container col-md-3">' +
+                '<span class="countdown-number">%-d</span>' +
+                '<span class="countdown-title">Days</span>'+
+              '</div>'
+
+            + '<div class="countdown-container col-md-3">' +
+                '<span class="countdown-number">%H</span>' +
+                '<span class="countdown-title">Hours</span>'+
+              '</div>  '
+
+            + '<div class="countdown-container col-md-3">' +
+                '<span class="countdown-title">%M</span>' +
+                '<span class="countdown-title">Minutes</span>'+
+              '</div> '
+            + '<div class="countdown-container col-md-3">' +
+                '<span class="countdown-title">%S</span>'+
+                '<span class="countdown-title">Seconds</span>'+
+            '</div>'));
     });
-}
+};
 
 $(function(){
     main.init();
