@@ -165,26 +165,30 @@ main.onIconTransition = function() {
 }
 
 main.initCountDown = function(){
-    $('#clock').countdown('2016/10/10').on('update.countdown', function(event) {
-        var $this = $(this).html(event.strftime(''
-            + '<div class="countdown-container col-md-3">' +
-                '<span class="countdown-number">%-d</span>' +
-                '<span class="countdown-title">Days</span>'+
-              '</div>'
 
-            + '<div class="countdown-container col-md-3">' +
-                '<span class="countdown-number">%H</span>' +
-                '<span class="countdown-title">Hours</span>'+
-              '</div>  '
+    // var fiveSeconds = new Date().getTime() + 5000;
+    // $('#clock').countdown(fiveSeconds, {elapse: true})
+    //     .on('update.countdown', function(event) {
+    //         var $this = $(this);
+    //         if (event.elapsed) {
+    //             $this.html(event.strftime('After end: <span>%H:%M:%S</span>'));
+    //         } else {
+    //             $this.html(event.strftime('To end: <span>%H:%M:%S</span>'));
+    //         }
+    //     });
 
-            + '<div class="countdown-container col-md-3">' +
-                '<span class="countdown-title">%M</span>' +
-                '<span class="countdown-title">Minutes</span>'+
-              '</div> '
-            + '<div class="countdown-container col-md-3">' +
-                '<span class="countdown-title">%S</span>'+
-                '<span class="countdown-title">Seconds</span>'+
-            '</div>'));
+    var beforeWedding = new Date(2016,03,10, 12, 22, 55);
+    var afterWedding = new Date ('2016/05/23');
+    var currentTime = new Date();
+    var getTotalTime = (afterWedding - currentTime);
+
+    var totalTimeResult = new Date().getTime() + getTotalTime;
+
+    $('#clock').countdown(totalTimeResult,{elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this);
+        $this.html(event.strftime(
+            var dayValue =))
+            $("#countdown-day").text();
     });
 };
 
