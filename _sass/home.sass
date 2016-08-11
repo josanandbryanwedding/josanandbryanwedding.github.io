@@ -188,14 +188,14 @@
     display: block
     margin: 0 auto 0 auto
     text-align: center
-    background-color: #FF5252
+    background-color: #2ecc71
     color: #fff
     border-radius: 50%
     z-index: 8
     position: relative
     line-height: 100px
     top: -50px
-    box-shadow: 0 0 0 5px #FF8A80, inset 0 0px 0 rgba(0, 0, 0, 0.08), 0 0px 11px 7px rgba(0, 0, 0, 0.07)
+    box-shadow: 0 0 0 5px #27ae60, inset 0 0px 0 rgba(0, 0, 0, 0.08), 0 0px 11px 7px rgba(0, 0, 0, 0.07)
     .church-image
       text-align: center
       height: 35px
@@ -228,14 +228,14 @@
           width: 100%
           text-align: center
 #countdown
-  background-image: url('/img/asset/countdown-bg.jpg')
+  background-image: url("/img/asset/countdown-bg.jpg")
   background-attachment: fixed
   background-size: cover
   background-position: center
   .countdown-container
-    margin: 70px 0
+    margin: 70px auto
     padding: 30px 0
-    background-color: white
+    background-color: #ffffff
     .section-header
       color: #3E3D39
       font-family: 'Montserrat'
@@ -244,6 +244,7 @@
       font-style: normal
       font-size: 2em
       margin-bottom: 20px
+      position: relative
       &:before
         margin: 0 auto
         text-align: center
@@ -254,13 +255,37 @@
         position: relative
         bottom: -70px
         background-color: #ddd
-    .clock
-      margin-top: 20px
-      .countdown-container
-        .countdown-number
-          display: block
-        .countdown-title
-          display: block
+    #clock
+      .item-list
+        margin: 30px 0
+        .item-container
+          position: relative
+          .countdown-name
+            display: block
+            text-align: center
+            margin: 15px 0
+          .countdown-value
+            position: relative
+            display: block
+            text-align: center
+            width: 50px
+            height: 50px
+            margin-left: auto
+            margin-right: auto
+            border: 1px solid #a4a4a4
+            padding: 65px
+            border-radius: 50%
+            .countdown-number
+              position: absolute
+              top: 50%
+              left: 0
+              right: 0
+              transform: translateY(-50%)
+              -webkit-transform: translateY(-50%)
+              -moz-transform: translateY(-50%)
+              -ms-transform: translateY(-50%)
+              -o-transform: translateY(-50%)
+              font-size: 20px
 
 
 #ourstory
@@ -440,7 +465,7 @@
           margin: 1em 0
           line-height: 1.7em
     .circle-shape
-      background: #FF5252
+      background: #2ecc71
       box-shadow: 0 0 0 8px white
       width: 150px
       height: 150px
@@ -585,102 +610,46 @@
       padding: 0
       margin-bottom: 5px
 
-#rsvp
-  background-image: url('/img/asset/rsvp-bg.jpg')
-  background-size: cover
-  background-position: center
-  background-attachment: fixed
-  .form-container
-    margin-top: 70px
-    margin-bottom: 70px
-    padding: 30px 0
-    background-color: white
-    font-family: "Montserrat","sans-serif"
-    &:before
-      margin: 0 auto
-      text-align: center
-      content: ""
-      height: 2px
-      width: 200px
-      display: block
-      position: relative
-      bottom: -70px
-      background-color: #ddd
-    #form-content
-      background: rgba(255, 255, 255, 1)
-      padding: 20px
-      border-radius: 1px
-      margin: 20px 0 20px 0
-      color: #777
-      font-size: 16px
-      line-height: 1.6em
-      position: relative
-      z-index: 1
-      .form-content-item
-        .content-title
-          font-size: 12px
-          text-transform: uppercase
-          margin: 0
-          padding: 20px 0 0 0
-          line-height: 1.7em
-          color: #777
-          display: block
-        .content-item
-          width: 100%
-          display: block
-          height: 40px
-          background-color: transparent
-          outline: none
-          border: 2px solid #eeeeee
-          padding-left: 15px
-
-      .submit-button
-        height: 40px
-        font-family: "Montserrat","sans-serif"
-        background-color: #ff5252
-        color: white
-        text-transform: uppercase
-        margin-top: 20px
-
-#gift-registration
-  .section-header
-    margin: 75px 0
-    text-align: center
-    font-size: 2em
-    color: #888
-    font-family: "Montserrat", "sans-serif"
-    text-transform: uppercase
-    letter-spacing: 0px
-    font-weight: normal
-    font-style: normal
-    &:before
-      margin: 0 auto
-      text-align: center
-      content: ""
-      height: 2px
-      width: 300px
-      display: block
-      position: relative
-      bottom: -50px
-      background-color: #ddd
-  .section-subtitle
-    max-width: 80%
-    text-align: center
-    margin: 0 auto 20px
-    color: #666
-    font-size: 14px
-    font-weight: normal
-    text-transform: none
-    line-height: 1.6em
-  .gift-sponsor-container
-    padding: 60px 0 120px
-    .gift-section
-      padding-top: 20px
-      padding-bottom: 20px
-      a
-        display: block
-
-
+#video
+  position: relative
+  height: 700px
+  .content-container
+    height: inherit
+    position: relative
+    #video-bg
+      transition: background-image 500ms ease-in-out
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+      height: inherit
+      .video-overlay
+        position: absolute
+        background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7))
+        height: 100%
+        width: 100%
+        z-index: 1
+      .video-content-container
+        width: 100%
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        -webkit-transform: translateY(-50%)
+        -moz-transform: translateY(-50%)
+        -o-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        z-index: 5
+        .video-button
+          cursor: pointer
+          left: 0
+          right: 0
+          height: 100px
+        .caption
+          .caption-text
+            color: white
+            letter-spacing: 2px
+            text-align: center
+      #iframe-video
+        background-color: black
 .modal.fade
   .modal-dialog
     position: absolute
@@ -726,6 +695,7 @@
 #our-gallery
   .container
     max-width: 970px
+    margin-bottom: 30px
     .section-header
       margin: 75px 0
       text-align: center
@@ -767,6 +737,9 @@
           .cover-image
             max-width: 50%
             min-width: 50%
+
+  #video
+    height: 600px
 
 @media (max-width: $screen-md-max)
   #people
@@ -884,16 +857,6 @@
     .countdown-container
       .section-header
         font-size: 1.3em
-      #clock
-        .item-container
-          text-align: center
-          .countdown-number
-            display: block
-            text-align: center
-          .countdown-value
-            display: block
-            text-align: center
-
 
   #ceremony
     .border-event-top
