@@ -6,13 +6,49 @@ main.init = function(){
     main.onIconTransition();
     main.initCountDown();
     main.onMenuClick();
-    main.onClickBrandLogo();
+    // main.onClickBrandLogo();
     main.onClickIntroButton();
     main.onFormSubmit();
-    setTimeout(function(){
-        main.instagramFeed();
-    }, 3000);
+    main.onVideoImageChange();
+    main.videoButtonOnClick();
+    main.instagramFeed();
+    // setTimeout(function(){
+    //     main.instagramFeed();
+    // }, 3000);
 }
+
+main.videoButtonOnClick = function(){
+    var videoButton = $('.video-button');
+    var videoIframeContainer = $('#video-bg');
+    var videoContainer = $('#iframe-video');
+    var videoMenuContainer = $("#video .content-container #video-bg .video-content-container");
+    var videoOverlay = $("#video .content-container #video-bg .video-overlay");
+
+    videoButton.on('click', function(){
+        videoContainer.css('display','none');
+        videoOverlay.css('display','none');
+        videoMenuContainer.css('display','none');
+        videoIframeContainer.append('<iframe src="https://player.vimeo.com/video/167778097?autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> ');
+    });
+
+};
+
+main.onVideoImageChange = function(){
+    var header = $('#video-bg');
+    var backgrounds = new Array(
+        'url(/img/asset/video-bg/videobg-1.jpg)'
+        , 'url(/img/asset/video-bg/videobg-2.jpg)'
+        , 'url(/img/asset/video-bg/videobg-3.jpg)'
+    );
+    var current = 0;
+    function nextBackground() {
+        current++;
+        current = current % backgrounds.length;
+        header.css('background-image', backgrounds[current]);
+    }
+    setInterval(nextBackground, 5000);
+    header.css('background-image', backgrounds[0]);
+};
 
 main.instagramFeed = function () {
     $.getScript('/js/instafeed.min.js', function () {
@@ -79,7 +115,7 @@ main.onClickIntroButton = function(){
 main.onClickBrandLogo = function(){
     var brandlogo = $('nav.navbar-default .container .navbar-header .navbar-brand');
     $(function() {
-        $('brandlogo').click(function() {
+        $(brandlogo).click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -165,30 +201,29 @@ main.onIconTransition = function() {
 }
 
 main.initCountDown = function(){
-
-    // var fiveSeconds = new Date().getTime() + 5000;
-    // $('#clock').countdown(fiveSeconds, {elapse: true})
-    //     .on('update.countdown', function(event) {
-    //         var $this = $(this);
-    //         if (event.elapsed) {
-    //             $this.html(event.strftime('After end: <span>%H:%M:%S</span>'));
-    //         } else {
-    //             $this.html(event.strftime('To end: <span>%H:%M:%S</span>'));
-    //         }
-    //     });
-
-    var beforeWedding = new Date(2016,03,10, 12, 22, 55);
     var afterWedding = new Date ('2016/05/23');
     var currentTime = new Date();
     var getTotalTime = (afterWedding - currentTime);
-
     var totalTimeResult = new Date().getTime() + getTotalTime;
+    
+    $('#countdown-day').countdown(totalTimeResult, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime(
+        '<span class="countdown-number">%-D</span>'))
+    });
 
-    $('#clock').countdown(totalTimeResult,{elapse: true}).on('update.countdown', function(event) {
-        var $this = $(this);
-        $this.html(event.strftime(
-            var dayValue =))
-            $("#countdown-day").text();
+    $('#countdown-hour').countdown(totalTimeResult, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime(
+            '<span class="countdown-number">%-H</span>'))
+    });
+
+    $('#countdown-minute').countdown(totalTimeResult, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime(
+            '<span class="countdown-number">%-M</span>'))
+    });
+
+    $('#countdown-second').countdown(totalTimeResult, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime(
+            '<span class="countdown-number">%-S</span>'))
     });
 };
 
