@@ -648,8 +648,13 @@
             color: white
             letter-spacing: 2px
             text-align: center
-      #iframe-video
-        background-color: black
+    #iframe-video
+      background-color: black
+      height: inherit
+      display: none
+      iframe
+        height: inherit
+
 .modal.fade
   .modal-dialog
     position: absolute
@@ -737,7 +742,6 @@
           .cover-image
             max-width: 50%
             min-width: 50%
-
   #video
     height: 600px
 
@@ -764,6 +768,8 @@
         p
           padding-left: 20px
           padding-right: 20px
+  #video
+    height: 500px
 
 @media (max-width: $screen-sm-max)
   #cover
@@ -919,6 +925,8 @@
         top: 0
         transform: none
         padding: 150px 0 100px
+  #video
+    height: 200px
 
 
 

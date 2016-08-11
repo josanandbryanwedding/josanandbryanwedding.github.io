@@ -19,8 +19,8 @@ main.init = function(){
 
 main.videoButtonOnClick = function(){
     var videoButton = $('.video-button');
-    var videoIframeContainer = $('#video-bg');
-    var videoContainer = $('#iframe-video');
+    var videoContainer = $('#video-bg');
+    var videoIframeContainer = $('#iframe-video');
     var videoMenuContainer = $("#video .content-container #video-bg .video-content-container");
     var videoOverlay = $("#video .content-container #video-bg .video-overlay");
 
@@ -28,6 +28,7 @@ main.videoButtonOnClick = function(){
         videoContainer.css('display','none');
         videoOverlay.css('display','none');
         videoMenuContainer.css('display','none');
+        videoIframeContainer.css('display','block');
         videoIframeContainer.append('<iframe src="https://player.vimeo.com/video/167778097?autoplay=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> ');
     });
 
