@@ -28,7 +28,8 @@ new URL(url).withReader (ENCODING) { reader ->
     document.'**'.findAll { it.@class == 'flip-entry' }.each{
       Map file = [:]
       String id = it.@id.toString().replace('entry-','')
-      file.url = "http://drive.google.com/uc?export=view&id=${id}"
+      file.permalinkImage = "http://drive.google.com/uc?export=view&id=${id}"
+      file.url = "https://drive.google.com/file/d/${id}/view?pli=1"
       files << file
     }
 }
@@ -38,6 +39,8 @@ new URL(url).withReader (ENCODING) { reader ->
 File yaml = new File('files.yml')
 
 files.each{ file ->
-  yaml << "  url: ${file.url}\n"
+  yaml << "- slugId: \n"
+  yaml << "  permaImage: ${file.permalinkImage}\n"
+  yaml << "  url: ${file.url}\n\n"
 }
 
