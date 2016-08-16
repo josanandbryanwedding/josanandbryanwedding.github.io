@@ -1,162 +1,105 @@
 //Global
+.no-gutter
+  padding-left: 0
+  padding-right: 0
+
 .stylized
   font-family: 'Dancing-Script-Regular','sans-serif'
 
 #cover
   position: relative
-  background-image: url('https://camillacreativephotography.files.wordpress.com/2016/01/cotswold-wedding-painswick-1.jpg?w=800&h=500')
-  //background-image: url('https://res.cloudinary.com/rocketmiles/image/fetch/w_1366,h_800,c_fill/https%3A%2F%2Fi.imgur.com%2FaqcwBS7.jpg')
+  background-image: url('/img/asset/cover-bg.jpg')
   background-attachment: fixed
   background-size: cover
-  background-position: top center
-  height: 115vh
-  .bg-overlay
-    position: absolute
-    width: 100%
-    height: 100%
-    background-color: rgba(0,0,0,0.5)
-  .intro-text-container
-    position: relative
-    padding-top: 260px
-    padding-bottom: 100px
-    left: 0
-    right: 0
-    margin-left: auto
-    margin-right: auto
-    .intro-text
+  background-position: center center
+  height: 100vh
+  .container-fluid
+    height: inherit
+    .bg-overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.5)
+    .intro-container
       position: relative
-      top: -40px
-      font-size: 50px
-      text-align: center
-      color: white
-    .intro-header
-      margin-bottom: 50px
-      text-transform: uppercase
-      font-family: 'Montserrat','sans-serif'
-      font-size: 75px
-      font-weight: 700
-      line-height: 75px
-      .left-section
-        .couple-name
-          float: right
-          margin-right: -55px
-          font-weight: normal
-          border-bottom: 2px solid rgba(255, 255, 255, 0.3)
-          border-top: 2px solid rgba(255, 255, 255, 0.3)
-          padding: 0px 0 9px 0
-          font-size: 75px
-          color: white
-      .right-section
-        .couple-name
-          float: left
-          margin-left: -35px
-          font-weight: normal
-          border-bottom: 2px solid rgba(255, 255, 255, 0.3)
-          border-top: 2px solid rgba(255, 255, 255, 0.3)
-          padding: 0px 0 9px 0
-          font-size: 75px
-          color: white
-      .pulse
-        color: white
-        -webkit-animation: pulse 1s linear infinite
-        -moz-animation: pulse 1s linear infinite
-        -ms-animation: pulse 1s linear infinite
-        animation: pulse 1s linear infinite
-        &:before
-          content: "\f08a"
-      .intro-place
-        font-family: Montserrat
-        text-transform: uppercase
-        letter-spacing: 0px
-        font-weight: normal
-        font-style: normal
-        color: white
-        text-align: center
-        &:before
-          opacity: 0.8
-          content: ""
-          height: 6px
-          width: 120px
-          display: inline-block
-          position: relative
-          top: -5px
-          right: 20px
-          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/////z4gsBhYAAZggTADEBwsiC4AF0QVAggAaRhQC3z7vXAAAAABJRU5ErkJggg==') repeat
-
-        &:after
-          opacity: 0.8
-          content: ""
-          height: 6px
-          width: 120px
-          display: inline-block
-          position: relative
-          top: -5px
-          left: 20px
-          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQIW2NkQAP/////z4gsBhYAAZggTADEBwsiC4AF0QVAggAaRhQC3z7vXAAAAABJRU5ErkJggg==') repeat
-      .intro-date
-        color: white
-        text-align: center
-        font-family: "Montserrat", "sans-serif"
-        font-size: 14px
-        font-weight: 400
-        position: relative
-        top: -5px
-      .intro-button
-        background-color: #FF5252
-        color: white
-        font-size: 16px
+      top: 50%
+      transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      margin-left: auto
+      margin-right: auto
+      .intro-image
+        .cover-image
+          max-width: 90%
+          height: auto
+          display: block
+          margin-left: auto
+          margin-right: auto
+    .mouse-scroll-container
+      position: relative
+      margin: 30px auto
+      .mouse
         display: block
-        width: fit-content
-        padding: 0px 50px
-        margin: 40px auto
-        text-decoration: none
-        transition: all 0.3s ease
-        -webkit-transition: all 0.3s ease
-        -o-transition: all 0.3s ease
-        &:hover
-          background-color: #FF8A80
+        margin-left: auto
+        margin-right: auto
+        width: 28px
+        height: 44px
+        border-radius: 12px
+        border: 2px solid #ffffff
+        text-align: center
+        &:after
+          display: inline-block
+          height: 8px
+          width: 8px
+          background-color: #ffffff
+          border-radius: 50%
+          content: ""
+          animation: scroll 1.3s ease-out infinite forwards
+      .caption
+        margin-top: 10px
+        text-transform: uppercase
+        text-align: center
+        color: white
+        font-family: "Montserrat"
 
-
-  .bottom-style
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    &:before
-      content: ''
-      position: absolute
-      border-style: solid
-      border-width: 90px 0 0px 685px
-      border-color: transparent transparent transparent #fff
-      z-index: 1
-      bottom: -15%
-      left: 0
-    &:after
-      content: ''
-      position: absolute
-      border-style: solid
-      border-width: 90px 685px 0px 0
-      border-color: transparent #fff transparent transparent
-      z-index: 1
-      bottom: -15%
-      right: 0
-
+@keyframes scroll
+  0%
+    transform: translateY(0)
+    -moz-transform: translateY(0)
+    -o-transform: translateY(0)
+    -ms-transform: translateY(0)
+  50%
+    transform: translateY(10px)
+    -moz-transform: translateY(10px)
+    -o-transform: translateY(10px)
+    -ms-transform: translateY(10px)
+  100%
+    transform: translateY(0)
+    -moz-transform: translateY(0)
+    -o-transform: translateY(0)
+    -ms-transform: translateY(0)
 
 #ceremony
   position: relative
   .border-event-top
     padding-top: 40px
-    h2
+    img
+      width: 200px
+      margin: 0 auto 40px
+    h4
+      text-align: center
+      text-transform: uppercase
       color: #777
       font-family: Montserrat
+    h3
+      color: #777
+      font-weight: 300
+      letter-spacing: 3px
       text-transform: uppercase
-      letter-spacing: 0px
-      font-weight: normal
-      font-style: normal
-      font-size: 1.3em
-      padding: 0 0 0 40px
+      padding: 0
       text-align: center
-      margin: 30px 0 0 0
+      margin: 0
     h1
       text-transform: uppercase
       font-weight: 300
@@ -165,12 +108,6 @@
       letter-spacing: 3px
       font-size: 2em
       text-align: center
-      span
-        color: #777
-        border-top: 2px solid #777
-        border-bottom: 2px solid #777
-        padding: 0
-        background-color: #fff
 
     .center-border
       border-left: 1px dashed #ddd
@@ -179,14 +116,14 @@
 
   .section-quotes
     .share-event
-      margin: 0 -10px 30px
+      font-size: 2.8em
+      font-family: 'Dancing-Script-Regular'
+      margin-bottom: 30px
       border-top: 1px dashed #ddd
       border-bottom: 1px dashed #ddd
       text-align: center
       color: #777
-      letter-spacing: 0px
-      font-size: 1.7em
-      text-transform: uppercase
+      letter-spacing: 0
       font-weight: bold
       padding: 50px 20px
       word-spacing: 5px
@@ -238,7 +175,7 @@
         font-size: 2em
         text-align: center
         font-weight: 300
-        lebetter-spacing: 3px
+        letter-spacing: 3px
       p
         padding: 5px 20% 0 20%
         font-size: 14px
@@ -251,14 +188,14 @@
     display: block
     margin: 0 auto 0 auto
     text-align: center
-    background-color: #FF5252
+    background-color: #006D44
     color: #fff
     border-radius: 50%
     z-index: 8
     position: relative
     line-height: 100px
     top: -50px
-    box-shadow: 0 0 0 5px #FF8A80, inset 0 0px 0 rgba(0, 0, 0, 0.08), 0 0px 11px 7px rgba(0, 0, 0, 0.07)
+    box-shadow: 0 0 0 5px #27ae60, inset 0 0px 0 rgba(0, 0, 0, 0.08), 0 0px 11px 7px rgba(0, 0, 0, 0.07)
     .church-image
       text-align: center
       height: 35px
@@ -270,7 +207,7 @@
     .venue
       text-align: center
       h2
-        font-family: Montserrat
+        font-family: 'Montserrat'
         text-transform: uppercase
         font-size: 1.3em
         color: #3E3D39
@@ -291,14 +228,14 @@
           width: 100%
           text-align: center
 #countdown
-  background-image: url('http://palazzoverde.com.ph/wp-content/themes/palazzoverde-v2/images/slider/homepage-default-image.jpg')
+  background-image: url("/img/asset/countdown-bg.jpg")
   background-attachment: fixed
   background-size: cover
   background-position: center
   .countdown-container
-    margin: 70px 0
+    margin: 70px auto
     padding: 30px 0
-    background-color: white
+    background-color: #ffffff
     .section-header
       color: #3E3D39
       font-family: 'Montserrat'
@@ -307,6 +244,7 @@
       font-style: normal
       font-size: 2em
       margin-bottom: 20px
+      position: relative
       &:before
         margin: 0 auto
         text-align: center
@@ -317,11 +255,38 @@
         position: relative
         bottom: -70px
         background-color: #ddd
+    #clock
+      .item-list
+        margin: 30px 0
+        .item-container
+          position: relative
+          .countdown-name
+            display: block
+            text-align: center
+            margin: 15px 0
+          .countdown-value
+            position: relative
+            display: block
+            text-align: center
+            width: 50px
+            height: 50px
+            margin-left: auto
+            margin-right: auto
+            border: 1px solid #a4a4a4
+            padding: 65px
+            border-radius: 50%
+            .countdown-number
+              position: absolute
+              top: 50%
+              left: 0
+              right: 0
+              transform: translateY(-50%)
+              -webkit-transform: translateY(-50%)
+              -moz-transform: translateY(-50%)
+              -ms-transform: translateY(-50%)
+              -o-transform: translateY(-50%)
+              font-size: 20px
 
-    .clock
-      margin-top: 20px
-      .text
-        font-weight: 400
 
 #ourstory
   .header
@@ -500,7 +465,7 @@
           margin: 1em 0
           line-height: 1.7em
     .circle-shape
-      background: #FF5252
+      background: #006D44
       box-shadow: 0 0 0 8px white
       width: 150px
       height: 150px
@@ -550,10 +515,13 @@
       bottom: -50px
       background-color: #ddd
   .common-border
-    border-right: 1px dashed #ddd
     height: 100%
-    margin: 15px 0
-    .bridesmaid
+    padding-top: 15px
+    padding-bottom: 15px
+    border-bottom: 1px dashed #ddd
+    border-right: 1px dashed #ddd
+    border-top: 1px dashed #ddd
+    .content-header
       font-family: "Montserrat"
       text-transform: uppercase
       font-weight: normal
@@ -561,74 +529,28 @@
       text-align: center
       font-size: 1.2em
       color: #666
-      margin: 30px 20px 0 0
+      margin: 30px 15px
       padding: 0
       border-radius: 0
       letter-spacing: 3px
     .testimonial
-      border-radius: 5px
-      display: block
-      padding: 20px
-      margin: 40px 0 0
+      margin-top: 20px
+      margin-bottom: 20px
       position: relative
-      text-align: left
-      font-weight: normal
-      font-size: 18px
-      border-left: none
-      color: #777
-      font-style: normal
-      .team-member-left
-        padding: 0px 0 25px
-        img
-          margin: 20px 15px 0 35px
-          width: 120px
-          height: 120px
+      .content-container
+        margin: 0px 0 25px
+        .content-image
+          width: 140px
+          height: 140px
           border-radius: 50%
-          text-align: left
-          float: right
-          position: relative
-          top: -5px
-        p
-          position: relative
+        .content-name
+          word-wrap: break-word
+          display: block
+          text-align: center
           font-size: 14px
-          text-align: right
-          padding: 0 175px 0 0
-          margin: 0 0 15px 0
-          top: 10px
-          left: 0px
+          text-transform: uppercase
+          margin: 15px 0 0
           color: #777
-          line-height: 1.7em
-          b
-            text-transform: uppercase
-            color: #777
-            font-size: 13px
-            letter-spacing: 3px
-      .team-member-right
-        padding: 0px 0 25px
-        img
-          margin: 20px 35px 0 20px
-          width: 120px
-          height: 120px
-          border-radius: 50%
-          text-align: right
-          float: left
-          position: relative
-          top: -5px
-        p
-          position: relative
-          font-size: 14px
-          text-align: left
-          padding: 0 0 0 175px
-          margin: 0 0 15px 0
-          top: 10px
-          left: 0px
-          color: #777
-          line-height: 1.7em
-          b
-            text-transform: uppercase
-            color: #777
-            font-size: 13px
-            letter-spacing: 3px
 
 #venue
   .section-header
@@ -688,140 +610,153 @@
       padding: 0
       margin-bottom: 5px
 
+#video
+  position: relative
+  height: 700px
+  .content-container
+    height: inherit
+    position: relative
+    #video-bg
+      transition: background-image 500ms ease-in-out
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+      height: inherit
+      .video-overlay
+        position: absolute
+        background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7))
+        height: 100%
+        width: 100%
+        z-index: 1
+      .video-content-container
+        width: 100%
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        -webkit-transform: translateY(-50%)
+        -moz-transform: translateY(-50%)
+        -o-transform: translateY(-50%)
+        -ms-transform: translateY(-50%)
+        z-index: 5
+        .video-button
+          cursor: pointer
+          left: 0
+          right: 0
+          height: 100px
+        .caption
+          .caption-text
+            color: white
+            letter-spacing: 2px
+            text-align: center
+    #iframe-video
+      background-color: black
+      height: inherit
+      display: none
+      iframe
+        height: inherit
+
+.modal.fade
+  .modal-dialog
+    position: absolute
+    top: 40%
+    left: 0
+    right: 0
+    opacity: 0
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
 
 
+  &.in .modal-dialog
+    margin-top: 0
+    margin-bottom: 0
+    position: absolute
+    top: 40%
+    opacity: 1
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)
 
-#rsvp
-  background-image: url('http://ndesaintheme.com/ulemulem/wp-content/uploads/2015/05/3dbbb45f71f5d0327765b32d5a6b7671.jpg')
-  background-size: cover
-  background-position: center
-  background-attachment: fixed
-  .form-container
-    margin-top: 70px
-    margin-bottom: 70px
-    padding: 30px 0
-    background-color: white
-    font-family: "Montserrat","sans-serif"
-    &:before
-      margin: 0 auto
-      text-align: center
-      content: ""
-      height: 2px
-      width: 200px
-      display: block
-      position: relative
-      bottom: -70px
-      background-color: #ddd
-    .form-content
-      background: rgba(255, 255, 255, 1)
-      padding: 20px
-      border-radius: 1px
-      margin: 20px 0 20px 0
-      color: #777
-      font-size: 16px
-      line-height: 1.6em
-      position: relative
-      z-index: 1
-      p
-        font-size: 12px
-        text-transform: uppercase
-        margin: 0
-        padding: 20px 0 0 0
-        line-height: 1.7em
-        color: #777
-        font-weight: normal
-        position: relative
-        top: 10px
-      select
-        height: 40px
-        background-color: #eeeeee
-      input
-        height: 40px
-        background-color: #eee
-      .submit-button
-        height: 40px
-        font-family: "Montserrat","sans-serif"
-        background-color: #ff5252
-        color: white
-        text-transform: uppercase
-        margin-top: 20px
-
-#gift-registration
-  .section-header
-    margin: 75px 0
+/* DIALOG CONTENT
+.modal-content
+  border: none
+  border-radius: 2px
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  padding: 8% 5%
+  background-color: #27ae60
+  .text-alert
+    margin: 20px auto
+    color: white
     text-align: center
-    font-size: 2em
-    color: #888
-    font-family: "Montserrat", "sans-serif"
-    text-transform: uppercase
-    letter-spacing: 0px
-    font-weight: normal
-    font-style: normal
-    &:before
-      margin: 0 auto
+
+#our-gallery
+  .container
+    max-width: 970px
+    margin-bottom: 30px
+    .section-header
+      margin: 75px 0
       text-align: center
-      content: ""
-      height: 2px
-      width: 300px
-      display: block
-      position: relative
-      bottom: -50px
-      background-color: #ddd
-  .section-subtitle
-    max-width: 80%
-    text-align: center
-    margin: 0 auto 20px
-    color: #666
-    font-size: 14px
-    font-weight: normal
-    text-transform: none
-    line-height: 1.6em
-  .gift-sponsor-container
-    padding: 60px 0 120px
-    .gift-section
-      padding-top: 20px
-      padding-bottom: 20px
-      a
+      font-size: 2em
+      color: #888
+      font-family: "Montserrat", "sans-serif"
+      text-transform: uppercase
+      letter-spacing: 0px
+      font-weight: normal
+      font-style: normal
+      &:before
+        margin: 0 auto
+        text-align: center
+        content: ""
+        height: 2px
+        width: 300px
         display: block
+        position: relative
+        bottom: -50px
+        background-color: #ddd
+    #instafeed
+      margin-bottom: 30px
+      .placeholder
+        padding: 5px
+        .image-link
+          display: block
+          img
+            display: block
+            max-width: 100%
+            height: auto
+            margin: auto
 
 
-@media (min-width: 1441px)
+@media (max-width: 1440px)
   #cover
-    .intro-text-container
-      padding-top: 350px
+    .container-fluid
+      .intro-container
+        .intro-image
+          .cover-image
+            max-width: 50%
+            min-width: 50%
+  #video
+    height: 600px
 
 @media (max-width: $screen-md-max)
-  #cover
-    .intro-text-container
-      padding-top: 210px
-      .intro-text
-        font-size: 50px
-      .intro-header
-        .left-section
-          .couple-name
-            display: table
-            font-size: 65px
-            float: none
-            text-align: center
-            width: fit-content
-            margin-left: auto
-            margin-right: auto
-        .right-section
-          .couple-name
-            display: table
-            font-size: 65px
-            float: none
-            text-align: center
-            width: fit-content
-            margin-left: auto
-            margin-right: auto
-        .intro-place
-          display: table
-          margin: 0 auto
-          padding: 15px 0
-          font-size: 27px
-        .intro-date
-          font-size: 16px
+  #people
+    .common-border
+      .testimonial
+        .content-container
+          .content-image
+            width: 120px
+            height: 120px
+          .content-name
+            font-size: 12px
+
+
   #ceremony
     .couple-info-section
       .common-border
@@ -833,11 +768,21 @@
         p
           padding-left: 20px
           padding-right: 20px
+  #video
+    height: 500px
 
 @media (max-width: $screen-sm-max)
   #cover
-    .intro-text-container
-      padding-top: 300px
+    .container-fluid
+      .intro-container
+        .intro-image
+          .cover-image
+            max-width: 90%
+            height: auto
+  #countdown
+    background-image: none
+    .countdown-container
+      margin: 0
 
   #ceremony
     .couple-info-section
@@ -866,36 +811,6 @@
           width: 90%
           margin: 0 auto
           float: none !important
-          
-  #people
-    .common-border
-      .groomsmen
-        margin: 30px 0
-      .bridesmaid
-        margin: 30px 0
-      .testimonial
-        .team-member-left
-          padding: 0
-          img
-            display: block
-            margin-left: auto
-            margin-right: auto
-            float: none
-          p
-            padding: 20px 10px
-            margin: 0px
-            text-align: center
-        .team-member-right
-          padding: 0
-          img
-            display: block
-            margin-left: auto
-            margin-right: auto
-            float: none
-          p
-            padding: 20px 10px
-            margin: 0px
-            text-align: center
 
   #gift-registration
     .gift-sponsor-container
@@ -904,26 +819,20 @@
         padding-top: 20px
         padding-bottom: 20px
 
-@media (max-width: $screen-xs-max)
+@media (max-width: 800px) and (orientation: landscape)
   #cover
-    .intro-text-container
-      padding-top: 190px
-    .bottom-style
-      &:before
-        border-width: 90px 0 0px 320px
-      &:after
-        border-width: 90px 320px 0px 0
+    .container-fluid
+      .intro-container
+        .intro-image
+          .cover-image
+            max-width: 60%
 
-
+@media (max-width: $screen-xs-max)
   #ceremony
     .venue-container
       .venue
         padding: 10px 0
-        
-  #people
-    .common-border
-      .testimonial
-        margin-top: 10px
+
 
   #ourstory
     .quote-ribbon
@@ -940,31 +849,24 @@
       .venue-small
         margin: 5px 0
 
+
+
 @media (max-width: 568px)
   #cover
     height: auto
-    .intro-text-container
-      .intro-text
-        font-size: 42px
-      .intro-header
-        font-size: 50px
-        .left-section
-          .couple-name
-            font-size: 55px
-        .right-section
-          .couple-name
-            font-size: 55px
-        .intro-place
-          &:before
-            display: block
-            top: 0
-            right: 0
-            width: 250px
-          &:after
-            display: block
-            top: 0
-            left: 0
-            width: 250px
+    .container-fluid
+      .intro-container
+        top: 0
+        transform: none
+        padding: 190px 0 100px
+      .mouse-scroll-container
+        .caption
+          font-size: 12px
+
+  #countdown
+    .countdown-container
+      .section-header
+        font-size: 1.3em
 
   #ceremony
     .border-event-top
@@ -977,12 +879,6 @@
     .section-quotes
       .share-event
         font-size: 1.5em
-
-@media (max-width: 568px)
-  #countdown
-    .countdown-container
-      .section-header
-        font-size: 1.3em
 
   #ourstory
     .ribbon
@@ -998,12 +894,44 @@
       .timeline-block
         .timeline-content
           width: 100%
-          padding: 20px 
-          
+          padding: 20px
+
+  #people
+    .common-border
+      .testimonial
+        .content-container
+          .content-image
+            height: 100px
+            width: 100px
+
   #rsvp
     .form-container
       &:before
         display: none
+
+  #our-gallery
+    .container
+      #instafeed
+        .placeholder
+          padding: 2px
+
+  footer
+    h4
+      font-size: 14px
+    h5
+      font-size: 12px
+
+@media (max-width: 568px) and (orientation: landscape)
+  #cover
+    height: auto
+    .container-fluid
+      .intro-container
+        top: 0
+        transform: none
+        padding: 150px 0 100px
+  #video
+    height: 200px
+
 
 
 

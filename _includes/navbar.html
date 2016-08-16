@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {% for navbarMenu in site.data.navbar %}
                 <li class="navbar-menu" class="navbar-menu">
-                    <a href="#{{ navbarMenu.url }}">{{ navbarMenu.name | upcase }}</a>
+                    <a class="menu" href="#{{ navbarMenu.url }}">{{ navbarMenu.name | upcase }}</a>
                 </li>
                 {% endfor %}
             </ul>

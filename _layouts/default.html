@@ -10,22 +10,27 @@
 
   <title>Josan & Bryan Wedding</title>
 
+  <link rel="shorcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="/css/home.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 <body>
 
 {% include navbar.html %}
 {{ content }}
+
+{% include modal.html %}
 {% include footer.html %}
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/jPushMenu.js"></script>
-<script type="text/javascript" src="/js/jquery.final-countdown.min.js"></script>
+<script type="text/javascript" src="/js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="/js/instafeed.min.js"></script>
 <script type="text/javascript" src="/js/kinetic-v5.1.0.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeAKRKcJAGPH0kzf_1dO-1xl_qDicJIu0&callback=initMap"></script>
 <script>
@@ -33,21 +38,106 @@
     var mapLocation = {lat: 14.370429, lng: 121.008782};
     var customMapType = new google.maps.StyledMapType([
       {
-        featureType: 'road',
-        stylers: [
-          {visibility: 'simplified'},
-          {gamma: 0.5},
-          {weight: 0.5},
-          { hue: "#333333" }
+        "featureType": "landscape",
+        "stylers": [
+          {
+            "hue": "#FFBB00"
+          },
+          {
+            "saturation": 43.400000000000006
+          },
+          {
+            "lightness": 37.599999999999994
+          },
+          {
+            "gamma": 1
+          }
         ]
       },
       {
-        elementType: 'labels',
-        stylers: [{visibility: 'on'}]
+        "featureType": "road.highway",
+        "stylers": [
+          {
+            "hue": "#FFC200"
+          },
+          {
+            "saturation": -61.8
+          },
+          {
+            "lightness": 45.599999999999994
+          },
+          {
+            "gamma": 1
+          }
+        ]
       },
       {
-        featureType: 'water',
-        stylers: [{color: '#2d2d2d'}]
+        "featureType": "road.arterial",
+        "stylers": [
+          {
+            "hue": "#FF0300"
+          },
+          {
+            "saturation": -100
+          },
+          {
+            "lightness": 51.19999999999999
+          },
+          {
+            "gamma": 1
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "stylers": [
+          {
+            "hue": "#FF0300"
+          },
+          {
+            "saturation": -100
+          },
+          {
+            "lightness": 52
+          },
+          {
+            "gamma": 1
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "stylers": [
+          {
+            "hue": "#0078FF"
+          },
+          {
+            "saturation": -13.200000000000003
+          },
+          {
+            "lightness": 2.4000000000000057
+          },
+          {
+            "gamma": 1
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "stylers": [
+          {
+            "hue": "#00FF6A"
+          },
+          {
+            "saturation": -1.0989010989011234
+          },
+          {
+            "lightness": 11.200000000000017
+          },
+          {
+            "gamma": 1
+          }
+        ]
       }
     ], {
       name: 'Custom Style'
