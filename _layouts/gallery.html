@@ -25,9 +25,22 @@
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/blazy.min.js"></script>
 <script type="text/javascript">
-    (function() {
-        var bLazy = new Blazy();
-    })();
+    $(document).ready(function () {
+        var bLazy = new Blazy({
+            selector: '.b-lazy',
+            success: function(ele){
+                $(".b-lazy.b-loaded").parent().addClass("add-after");
+
+            }
+        });
+
+        $(".image-link").on("click",function () {
+            var imageSrcValue =  $(this).parent().find(".modal .lazy.content-image").attr("data-src");
+            $(this).parent().find(".modal .content-image").attr("src", imageSrcValue);
+            console.log(imageSrcValue);
+        });
+
+    });
 </script>
 
 

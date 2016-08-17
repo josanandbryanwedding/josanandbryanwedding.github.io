@@ -14,7 +14,7 @@ def options = cli.parse(args)
 
 //String url = "https://drive.google.com/a/crux.design/embeddedfolderview?id=0B5k0-3AGRBIfQ0lGdmxxd3FYeDQ#grid"
 //engagement
-String url = "https://drive.google.com/a/crux.design/embeddedfolderview?id=0B5k0-3AGRBIfUzV3X1YwOVJmVUU#grid"
+//String url = "https://drive.google.com/a/crux.design/embeddedfolderview?id=0B5k0-3AGRBIfUzV3X1YwOVJmVUU#grid"
 //bride
 //String url = "https://drive.google.com/a/crux.design/embeddedfolderview?id=0B5k0-3AGRBIfdXNnSlpfQVQzSFE#grid"
 //groom
@@ -24,7 +24,7 @@ String url = "https://drive.google.com/a/crux.design/embeddedfolderview?id=0B5k0
 //postnup
 //String url = "https://drive.google.com/a/crux.design/embeddedfolderview?id=0B5k0-3AGRBIfcnJ1YzdXMDZkcWM#grid"
 //reception
-//String url = "https://drive.google.com/a/crux.design/embeddedfolderview?id=0B5k0-3AGRBIfc0dwNTFIQUNrOGc#grid"
+String url = "https://drive.google.com/a/crux.design/embeddedfolderview?id=0B5k0-3AGRBIfc0dwNTFIQUNrOGc#grid"
 
 println "Scraping ${url}..."
 
@@ -45,16 +45,15 @@ new URL(url).withReader (ENCODING) { reader ->
       file.permalinkImage = "http://drive.google.com/uc?export=view&id=${id}"
       file.url = "https://drive.google.com/file/d/${id}/view?pli=1"
       files << file
-
     }
 }
 
 //"mkdir -p out".execute()
 
-File yaml = new File('engagement.yml')
+File yaml = new File('reception.yml')
 
 files.each{ file ->
-  yaml << "- slugId: ${file.slugId} \n"
+  yaml << "- slugId: reception${file.slugId} \n"
   yaml << "  permaImage: ${file.permalinkImage}\n"
   yaml << "  col: \n"
   yaml << "  url: ${file.url}\n\n"
