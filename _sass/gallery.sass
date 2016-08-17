@@ -48,33 +48,37 @@
 
 .modal.fade
   .modal-dialog
+    max-width: 80%
+    margin: 0 auto
     position: absolute
-    top: 40%
-    left: 0
-    right: 0
-    opacity: 0
-    -webkit-transform: translateY(-40%)
-    -ms-transform: translateY(-40%)
-    -o-transform: translateY(-40%)
-    transform: translateY(-40%)
     -webkit-transition: all 0.3s ease
     -moz-transition: all 0.3s ease
     -o-transition: all 0.3s ease
     transition: all 0.3s ease
+    width: fit-content
+    top: 50%
+    left: 0
+    right: 0
+    opacity: 1
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
+    transform: translateY(-50%)
   &.in
     background-color: rgba(0,0,0,0.7)
     .modal-dialog
-      min-width: 50%
-      max-width: 50%
       margin-top: 0
       margin-bottom: 0
-      position: absolute
-      top: 40%
+      top: 50%
+      left: 0
+      right: 0
       opacity: 1
-      -webkit-transform: translateY(-40%)
-      -ms-transform: translateY(-40%)
-      -o-transform: translateY(-40%)
-      transform: translateY(-40%)
+      -webkit-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      transform: translateY(-50%)
+      .content-image
+        max-height: 768px
 
 /* DIALOG CONTENT
 .modal-content
@@ -107,3 +111,19 @@
     &:hover
       opacity: 1
       color: #ffffff
+
+@media (max-width: 1440px)
+  .modal.fade.in
+    .modal-dialog
+      .content-image
+        max-height: 650px
+
+@media (max-width: $screen-sm)
+  .modal.fade.in
+    .modal-dialog
+      .content-image
+        max-height: 750px
+
+
+
+
