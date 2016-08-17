@@ -11,11 +11,21 @@ main.init = function(){
     main.onFormSubmit();
     main.onVideoImageChange();
     main.videoButtonOnClick();
-    main.instagramFeed();
+
+    main.onImageLoad();
+    // main.instagramFeed();
     // setTimeout(function(){
     //     main.instagramFeed();
     // }, 3000);
 }
+
+main.onImageLoad = function(){
+   $(".content-image").on('load',function(){
+       $(this).fadeIn("slow");
+       $(this).parent().removeClass("is-loading");
+       $(this).parent().addClass("done-loading");
+   })
+};
 
 main.videoButtonOnClick = function(){
     var videoButton = $('.video-button');

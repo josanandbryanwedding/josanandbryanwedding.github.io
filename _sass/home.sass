@@ -286,8 +286,6 @@
               -ms-transform: translateY(-50%)
               -o-transform: translateY(-50%)
               font-size: 20px
-
-
 #ourstory
   .header
     height: 150px
@@ -670,18 +668,20 @@
     -moz-transition: all 0.3s ease
     -o-transition: all 0.3s ease
     transition: all 0.3s ease
-
-
-  &.in .modal-dialog
-    margin-top: 0
-    margin-bottom: 0
-    position: absolute
-    top: 40%
-    opacity: 1
-    -webkit-transform: translateY(-40%)
-    -ms-transform: translateY(-40%)
-    -o-transform: translateY(-40%)
-    transform: translateY(-40%)
+  &.in
+    background-color: rgba(0,0,0,0.7)
+    .modal-dialog
+      min-width: 50%
+      max-width: 50%
+      margin-top: 0
+      margin-bottom: 0
+      position: absolute
+      top: 40%
+      opacity: 1
+      -webkit-transform: translateY(-40%)
+      -ms-transform: translateY(-40%)
+      -o-transform: translateY(-40%)
+      transform: translateY(-40%)
 
 /* DIALOG CONTENT
 .modal-content
@@ -690,8 +690,30 @@
   -webkit-box-shadow: none
   -moz-box-shadow: none
   box-shadow: none
-  padding: 8% 5%
-  background-color: #27ae60
+  padding: 0
+  background-color: transparent
+  .close
+    position: absolute
+    width: 35px
+    height: 35px
+    background-color: #000
+    opacity: 1
+    color: #ffffff
+    z-index: 999
+    right: -5px
+    top: -5px
+    border-radius: 50%
+    font-size: 24px
+    border: 2px solid #fff
+    line-height: 34px
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.35)
+    box-shadow: none
+    text-shadow: none
+    &:focus
+      outline: none
+    &:hover
+      opacity: 1
+      color: #ffffff
   .text-alert
     margin: 20px auto
     color: white
@@ -699,7 +721,6 @@
 
 #our-gallery
   .container
-    max-width: 970px
     margin-bottom: 30px
     .section-header
       margin: 75px 0
@@ -725,14 +746,65 @@
       margin-bottom: 30px
       .placeholder
         padding: 5px
+        overflow: hidden
         .image-link
+          position: relative
           display: block
-          img
-            display: block
-            max-width: 100%
-            height: auto
-            margin: auto
-
+          cursor: pointer
+          overflow: hidden
+          &.is-loading
+            height: 350px
+            background: url("/img/loading.gif") center no-repeat transparent
+            background-color: #f7f7f7
+            .content-image
+              display: none
+          &.done-loading
+            height: 350px
+            &:after
+              content: "\e003"
+              font-family: 'Glyphicons Halflings'
+              opacity: 0
+              background-color: rgba(0, 0, 0, 0.75)
+              position: absolute
+              right: 0
+              left: 0
+              top: 0
+              margin-left: auto
+              margin-right: auto
+              bottom: 0
+              text-align: center
+              line-height: 350px
+              font-size: 30px
+              color: #fff
+              -webkit-transition: all 0.5s ease-in-out 0s
+              -moz-transition: all 0.5s ease-in-out 0s
+              transition: all 0.5s ease-in-out 0s
+            &:hover:after
+              opacity: 1
+            .content-image
+              object-fit: cover
+              display: block
+              width: 100%
+              height: 100%
+              margin: auto
+    .view-more-link
+      text-decoration: none
+      display: table
+      margin: auto
+      .view-more
+        color: white
+        display: inline-block
+        padding: 25px 50px
+        margin-left: auto
+        margin-right: auto
+        background-color: #006D44
+        transition: background-color 300ms ease-in-out
+        -webkit-transition: background-color 300ms ease-in-out
+        -moz-transition: background-color 300ms ease-in-out
+        -o-transition: background-color 300ms ease-in-out
+        -ms-transition: background-color 300ms ease-in-out
+        &:hover,&:focus,&:active
+          background-color: #2ecc71
 
 @media (max-width: 1440px)
   #cover
@@ -745,7 +817,24 @@
   #video
     height: 600px
 
+  .modal.fade.in
+    .modal-dialog
+      top: 50%
+      transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      max-width: 90%
+      min-width: 70%
+
 @media (max-width: $screen-md-max)
+  #our-gallery
+    .container
+      #instafeed
+        .placeholder
+          .image-link
+            &.is-loading
+              height: 300px
   #people
     .common-border
       .testimonial
@@ -755,7 +844,6 @@
             height: 120px
           .content-name
             font-size: 12px
-
 
   #ceremony
     .couple-info-section
@@ -812,12 +900,17 @@
           margin: 0 auto
           float: none !important
 
-  #gift-registration
-    .gift-sponsor-container
-      padding-bottom: 100px
-      .gift-section
-        padding-top: 20px
-        padding-bottom: 20px
+  #our-gallery
+    .container
+      #instafeed
+        .placeholder
+          .image-link
+            &.is-loading
+              height: 243px
+            &.done-loading
+              height: auto
+              &:after
+                display: none
 
 @media (max-width: 800px) and (orientation: landscape)
   #cover
@@ -825,14 +918,13 @@
       .intro-container
         .intro-image
           .cover-image
-            max-width: 60%
+            max-width: 50%
 
 @media (max-width: $screen-xs-max)
   #ceremony
     .venue-container
       .venue
         padding: 10px 0
-
 
   #ourstory
     .quote-ribbon
@@ -904,17 +996,39 @@
             height: 100px
             width: 100px
 
-  #rsvp
-    .form-container
-      &:before
-        display: none
+  #our-gallery
+    .container
+      .section-header
+        margin: 0 0 50px
+      #instafeed
+        .placeholder
+          padding: 0
+          width: 100%
+          .image-link
+            &.is-loading
+              height: 210px
+  #video
+    height: 400px
 
+  footer
+    h4
+      font-size: 14px
+    h5
+      font-size: 12px
+
+@media (max-width: 568px) and (orientation: landscape)
+  #cover
+    height: auto
+    .container-fluid
+      .intro-container
+        top: 0
+        transform: none
+        padding: 150px 0 100px
   #our-gallery
     .container
       #instafeed
         .placeholder
           padding: 2px
-
   footer
     h4
       font-size: 14px
