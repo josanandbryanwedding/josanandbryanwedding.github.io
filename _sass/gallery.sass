@@ -1,0 +1,110 @@
+.content-container
+  .gallery-section
+    margin-bottom: 30px
+    .placeholder
+      padding: 5px
+      .image-link
+        position: relative
+        display: block
+        cursor: pointer
+        &:after
+          content: "\e003"
+          font-family: 'Glyphicons Halflings'
+          opacity: 0
+          background-color: rgba(0, 0, 0, 0.75)
+          position: absolute
+          right: 0
+          left: 0
+          top: 0
+          margin-left: auto
+          margin-right: auto
+          bottom: 0
+          text-align: center
+          line-height: 188px
+          font-size: 30px
+          color: #fff
+          -webkit-transition: all 0.5s ease-in-out 0s
+          -moz-transition: all 0.5s ease-in-out 0s
+          transition: all 0.5s ease-in-out 0s
+        &:hover:after
+          opacity: 1
+        .content-image
+          object-fit: cover
+          display: block
+          width: 100%
+          height: 100%
+          margin: auto
+          &.b-lazy
+            -webkit-transition: all 1s ease-in-out
+            -moz-transition: all 1s ease-in-out
+            -o-transition: all 1s ease-in-out
+            transition: all 1s ease-in-out
+            max-width: 100%
+            height: 188px
+            background: #f7f7f7 url("/img/loading.gif") center no-repeat
+            opacity: 0.7
+          &.b-loaded
+            opacity: 1
+            background: transparent
+
+.modal.fade
+  .modal-dialog
+    position: absolute
+    top: 40%
+    left: 0
+    right: 0
+    opacity: 0
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+  &.in
+    background-color: rgba(0,0,0,0.7)
+    .modal-dialog
+      min-width: 50%
+      max-width: 50%
+      margin-top: 0
+      margin-bottom: 0
+      position: absolute
+      top: 40%
+      opacity: 1
+      -webkit-transform: translateY(-40%)
+      -ms-transform: translateY(-40%)
+      -o-transform: translateY(-40%)
+      transform: translateY(-40%)
+
+/* DIALOG CONTENT
+.modal-content
+  border: none
+  border-radius: 2px
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  padding: 0
+  background-color: transparent
+  .close
+    position: absolute
+    width: 35px
+    height: 35px
+    background-color: #000
+    opacity: 1
+    color: #ffffff
+    z-index: 999
+    right: -5px
+    top: -5px
+    border-radius: 50%
+    font-size: 24px
+    border: 2px solid #fff
+    line-height: 34px
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.35)
+    box-shadow: none
+    text-shadow: none
+    &:focus
+      outline: none
+    &:hover
+      opacity: 1
+      color: #ffffff
