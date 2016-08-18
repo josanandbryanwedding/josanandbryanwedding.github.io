@@ -13,3 +13,6 @@
 - name: Gallery
   url: our-gallery
 
+- name: Supplier
+  url: supplier
+

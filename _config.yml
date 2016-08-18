@@ -1,15 +1,12 @@
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Josan and Bryan Wedding
+
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Once in a while, right in the middle of an ordinary life, love gives us a fairytale.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+
 
 # Build settings
 markdown: kramdown
@@ -71,7 +68,7 @@ people:
       image: 'jizea.png'
       
 
-    - name: Michelle Mae Ong
+    - name:  Michelle Mae Ong
       image: 'michelle.png'
       
 
@@ -81,6 +78,68 @@ people:
 
     - name: Janine April Tolentino
       image: 'janine.png'
+
+supplier:
+  - name:  "Palazzo Verde"
+    product: "Venue"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/15.png"
+
+  - name: "Threelogy Video"
+    product: "Videography"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/1.png"
+
+  - name:  "Hugbig"
+    product: "Photography"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/10.png"
+
+  - name: "Vatel Manila"
+    product: "Entourage Flowers & Bridal Bouquet"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/2.png"
+
+  - name:  "Aljoe Mix"
+    product: "Lights, Sounds, and LED Wall"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/3.png"
+
+  - name:  "Josiah's Catering"
+    product: "Caterer"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/4.png"
+
+  - name:  "4th Wall Production Design Station"
+    product: "Event Styling"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/5.png"
+
+  - name:  "Manila Philharmonic Orchestra"
+    product: "Musician"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/6.png"
+
+  - name:  "Piece of Cake by Yumi Castrillo"
+    product: "Cake"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/7.png"
+
+  - name:  "Flip Productions"
+    product: "Photo booth"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/8.png"
+
+  - name:  "Avi Capili-Bobadilla"
+    product: "Bridal Gown"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/9.png"
+
+  - name:  "Graciela Claudio"
+    product: "Bridal Makeup"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/11.png"
+
+  - name:  "Living Gifts"
+    product: "Souvenirs"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/12.png"
+
+  - name:  "Kist and Makeup"
+    product: "HMUA"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/13.png"
+
+  - name:  "Shayne Ganalon Weddings & Events Management"
+    product: "OTD Coordination"
+    image: "https://res.cloudinary.com/design-studio/image/upload/jandbwedding/14.png"
+
 
 
 
