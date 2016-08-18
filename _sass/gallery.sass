@@ -138,12 +138,40 @@
       .content-image
         max-height: 650px
 
+  .section-banner
+    .image-container
+      .section-image
+        height: 150px
+
+
 @media (max-width: $screen-sm)
   .modal.fade.in
     .modal-dialog
       .content-image
         max-height: 750px
 
+@media (max-width: $screen-xs-max)
+  .section-banner
+    margin-bottom: 20px
+    .image-container
+      padding: 15px 0
+      .section-image
+        height: 80px
+  .content-container
+    padding: 10px 0 0
+    .section-header-container
+      .section-header
+        margin-bottom: 15px
+        text-align: center
+  .gallery-section
+    .placeholder
+      padding: 1px !important
+      .image-link
+        .content-image
+          &.b-lazy
+            height: 100px
+          &.b-lazy
+            height: 100px
 
 
 
