@@ -1,6 +1,6 @@
 <div class="container no-gutter">
     <h2 class="section-header">Our Gallery</h2>
-    <div id="instafeed" class="clearfix images">
+    <div id="gallery-container" class="clearfix images">
         {% for gallery-image in site.data.files %}
         <div class="col-lg-{{ gallery-image.col }} col-md-6 col-xs-6 placeholder">
             <a class="image-link is-loading" data-toggle="modal" data-target="#{{ gallery-image.slugId }}" target="_blank">
