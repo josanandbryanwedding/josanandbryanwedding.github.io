@@ -14,9 +14,9 @@ main.init = function(){
 
     main.onImageLoad();
     // main.instagramFeed();
-    // setTimeout(function(){
-    //     main.instagramFeed();
-    // }, 3000);
+    setTimeout(function(){
+        main.instagramFeed();
+    }, 3000);
 }
 
 main.onImageLoad = function(){
