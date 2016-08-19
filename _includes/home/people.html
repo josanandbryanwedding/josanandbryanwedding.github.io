@@ -24,7 +24,7 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix common-border section-container">
         <h3 class="content-header text-center">Groomsmens</h3>
         {% for groomsmen in site.people.groomsmen %}
-        <div class="testimonial no-gutter col-xs-6 ">
+        <div class="testimonial no-gutter col-lg-4 col-xs-6 ">
             <div class="content-container">
                 <img class="center-block content-image" src="/img/groosmen/{{ groomsmen.image }}"/>
                 <div class="caption">
@@ -37,7 +37,7 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 common-border section-container" style="border-right: none;">
         <h3 class="content-header text-center">Bridesmaids</h3>
         {% for bridesmaid in site.people.bridesmaid %}
-        <div class="testimonial no-gutter col-xs-6">
+        <div class="testimonial no-gutter col-lg-4 col-xs-6">
             <div class="content-container">
                 <img class="center-block content-image" src="/img/bridesmaid/{{ bridesmaid.image }}"/>
                 <span class="content-name">{{ bridesmaid.name }}</span>
