@@ -30,7 +30,7 @@
 <script type="text/javascript" src="/js/kinetic-v5.1.0.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeAKRKcJAGPH0kzf_1dO-1xl_qDicJIu0&callback=initMap"></script>
 <script>
-  function initMap() {
+  window.initMap = function() {
     var mapLocation = {lat: 14.370429, lng: 121.008782};
     var customMapType = new google.maps.StyledMapType([
       {
