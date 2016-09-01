@@ -143,7 +143,6 @@ main.onClickBrandLogo = function(){
 
 main.onMenuClick = function(){
     $(document).on("scroll", onScroll);
-    
     $('.navbar-menu a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
@@ -212,27 +211,32 @@ main.onIconTransition = function() {
 }
 
 main.initCountDown = function(){
-    var afterWedding = new Date ('2016/05/23');
-    var currentTime = new Date();
-    var getTotalTime = (afterWedding - currentTime);
-    var totalTimeResult = new Date().getTime() + getTotalTime;
+    var weddingDate = new Date ('2016/05/23 ');
     
-    $('#countdown-day').countdown(totalTimeResult, {elapse: true}).on('update.countdown', function(event) {
+    $('#countdown-day').countdown(weddingDate, {elapse: true}).on('update.countdown', function(event) {
         var $this = $(this).html(event.strftime(
         '<span class="countdown-number">%-D</span>'))
+        var countdownHeader = $("#countdown .section-header");
+
+        if(event.elapsed){
+            countdownHeader.text("Forever and counting");
+        }
+        else{
+            countdownHeader.text("How long do we have to wait?");
+        }
     });
 
-    $('#countdown-hour').countdown(totalTimeResult, {elapse: true}).on('update.countdown', function(event) {
+    $('#countdown-hour').countdown(weddingDate, {elapse: true}).on('update.countdown', function(event) {
         var $this = $(this).html(event.strftime(
             '<span class="countdown-number">%-H</span>'))
     });
 
-    $('#countdown-minute').countdown(totalTimeResult, {elapse: true}).on('update.countdown', function(event) {
+    $('#countdown-minute').countdown(weddingDate, {elapse: true}).on('update.countdown', function(event) {
         var $this = $(this).html(event.strftime(
             '<span class="countdown-number">%-M</span>'))
     });
 
-    $('#countdown-second').countdown(totalTimeResult, {elapse: true}).on('update.countdown', function(event) {
+    $('#countdown-second').countdown(weddingDate, {elapse: true}).on('update.countdown', function(event) {
         var $this = $(this).html(event.strftime(
             '<span class="countdown-number">%-S</span>'))
     });
