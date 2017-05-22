@@ -42,7 +42,7 @@ new URL(url).withReader (ENCODING) { reader ->
       Map file = [:]
       String id = it.@id.toString().replace('entry-','')
       file.slugId = counter
-      file.permalinkImage = "http://drive.google.com/uc?export=view&id=${id}"
+      file.permalinkImage = "https://drive.google.com/uc?export=view&id=${id}"
       file.url = "https://drive.google.com/file/d/${id}/view?pli=1"
       files << file
     }
